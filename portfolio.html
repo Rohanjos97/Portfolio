@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+      <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+       <link href="{{fontLink}}" rel="stylesheet">
+       <link href="{{secondaryFontLink}}" rel="stylesheet">
+      
+
+      <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+
+
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      
+      
+
+      <!-- Preconnect -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+      <!-- Font stylesheet -->
+
+      <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: {
+                  DEFAULT: '{{settings.colors.primary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8', 
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  DEFAULT: '{{settings.colors.secondary}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3', 
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  DEFAULT: '{{settings.colors.accent}}',
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3', 
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['{{settings.fonts.primary}}', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+                body: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      });
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      
+      <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+      
+      <style>
+        h1, h2, h3, h4, h5, h6 {
+          font-family: {{settings.fonts.primary}}, system-ui, sans-serif;
+        }
+        body {
+          font-family: {{settings.fonts.secondary}}, system-ui, sans-serif;
+        }
+      </style>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="06645902-0e20-4298-ba47-fabda2ca0fe9" data-section-id="06645902-0e20-4298-ba47-fabda2ca0fe9">
+
+
+<div id="root">
+  <nav class="fixed w-full z-50 bg-neutral-900 border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="text-green-500 font-mono text-xl">></div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#hero" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Home</a>
+              <a href="#about" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">About</a>
+              <a href="#experience" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Experience</a>
+              <a href="#education" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Education</a>
+              <a href="#projects" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Projects</a>
+              <a href="#skills" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Skills</a>
+              <a href="#publications" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Publications</a>
+              <a href="#contact" class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-400 hover:text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#hero" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Home</a>
+          <a href="#about" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">About</a>
+          <a href="#experience" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Experience</a>
+          <a href="#education" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Education</a>
+          <a href="#projects" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Projects</a>
+          <a href="#skills" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Skills</a>
+          <a href="#publications" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Publications</a>
+          <a href="#contact" class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="bg-neutral-900 min-h-[70vh] flex items-center pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-green-500 font-mono text-4xl md:text-6xl font-bold animate__animated animate__fadeIn">
+          <span class="typing-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="mt-6 text-gray-400 text-xl md:text-2xl font-mono animate__animated animate__fadeIn animate__delay-1s">
+          DevOps Engineer & Tech Enthusiast
+        </p>
+        <div class="mt-10 animate__animated animate__fadeIn animate__delay-2s">
+          <a href="#contact" class="bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-3 px-8 rounded-lg transition-colors duration-200">
+            > Contact Me_
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Typing effect
+    const text = "Hello, World!";
+    const typingText = document.querySelector('.typing-text');
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        typingText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    // Start typing effect after page load
+    window.addEventListener('load', typeWriter);
+
+    // Cursor blink effect
+    const cursor = document.querySelector('.cursor');
+    setInterval(() => {
+      cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+    }, 500);
+  </script>
+</div>
+</element><element id="09fe1771-e728-460d-871b-14ac9722494c" data-section-id="09fe1771-e728-460d-871b-14ac9722494c">
+
+
+<div id="root">
+  <section id="about" class="bg-neutral-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-4">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">about.sh</span>
+        </div>
+        
+        <div class="terminal-content space-y-4">
+          <div class="animate__animated animate__fadeIn">
+            <span class="text-green-500 font-mono">$ whoami</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-200 font-mono mt-2">DevOps Engineer & System Architect</h2>
+          </div>
+
+          <div class="animate__animated animate__fadeIn animate__delay-1s">
+            <span class="text-green-500 font-mono">$ cat about.txt</span>
+            <div class="text-gray-300 font-mono mt-2 leading-relaxed">
+              <p class="mb-4">
+                > Passionate about automating infrastructure and optimizing deployment pipelines with 5+ years of experience in DevOps practices and cloud technologies.
+              </p>
+              <p class="mb-4">
+                > Specialized in containerization, CI/CD implementation, and cloud-native architecture.
+              </p>
+              <p>
+                > Currently focused on implementing scalable solutions and advancing cloud infrastructure automation.
+              </p>
+            </div>
+          </div>
+
+          <div class="animate__animated animate__fadeIn animate__delay-2s mt-8">
+            <span class="text-green-500 font-mono">$ ./show-tech-stack.sh</span>
+            <div class="flex flex-wrap gap-3 mt-4">
+              <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Docker</span>
+              <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Kubernetes</span>
+              <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">AWS</span>
+              <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Terraform</span>
+              <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Python</span>
+              <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="8e47cb49-fbf0-479e-922e-020305748c74" data-section-id="8e47cb49-fbf0-479e-922e-020305748c74">
+
+
+<div id="root">
+  <section id="experience" class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">work_experience.sh</span>
+        </div>
+
+        <div class="terminal-content space-y-8">
+          <div class="animate__animated animate__fadeIn">
+            <span class="text-green-500 font-mono">$ cat experience.log</span>
+            
+            <div class="mt-6 space-y-8">
+              <!-- Experience 1 -->
+              <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                  <h3 class="text-xl font-bold text-green-400 font-mono">Senior DevOps Engineer</h3>
+                  <span class="text-gray-400 font-mono text-sm">2021 - Present</span>
+                </div>
+                <h4 class="text-gray-300 font-mono mb-2">Tech Corp Solutions</h4>
+                <ul class="text-gray-400 font-mono space-y-2">
+                  <li>> Led implementation of Kubernetes clusters across multiple cloud providers</li>
+                  <li>> Reduced deployment time by 70% through CI/CD pipeline optimization</li>
+                  <li>> Architected scalable microservices infrastructure using Docker</li>
+                </ul>
+              </div>
+
+              <!-- Experience 2 -->
+              <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                  <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Engineer</h3>
+                  <span class="text-gray-400 font-mono text-sm">2019 - 2021</span>
+                </div>
+                <h4 class="text-gray-300 font-mono mb-2">Cloud Systems Inc</h4>
+                <ul class="text-gray-400 font-mono space-y-2">
+                  <li>> Managed AWS infrastructure using Terraform and CloudFormation</li>
+                  <li>> Implemented monitoring solutions using Prometheus and Grafana</li>
+                  <li>> Automated security compliance checks using Python scripts</li>
+                </ul>
+              </div>
+
+              <!-- Experience 3 -->
+              <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                  <h3 class="text-xl font-bold text-green-400 font-mono">Systems Administrator</h3>
+                  <span class="text-gray-400 font-mono text-sm">2017 - 2019</span>
+                </div>
+                <h4 class="text-gray-300 font-mono mb-2">Digital Solutions Ltd</h4>
+                <ul class="text-gray-400 font-mono space-y-2">
+                  <li>> Maintained and upgraded Linux server infrastructure</li>
+                  <li>> Implemented backup and disaster recovery solutions</li>
+                  <li>> Automated routine maintenance tasks using shell scripts</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
+
+
+<div id="root">
+  <section id="education" class="bg-neutral-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">education.sh</span>
+        </div>
+
+        <div class="terminal-content">
+          <div class="animate__animated animate__fadeIn">
+            <span class="text-green-500 font-mono">$ ls -la /education/*</span>
+            
+            <div class="mt-6 space-y-6">
+              <!-- Education 1 -->
+              <div class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                  <h3 class="text-xl font-bold text-green-400 font-mono">Master of Science in Computer Science</h3>
+                  <span class="text-gray-400 font-mono text-sm">2015 - 2017</span>
+                </div>
+                <h4 class="text-gray-300 font-mono mb-2">> Technical University</h4>
+                <ul class="text-gray-400 font-mono space-y-2 mt-4">
+                  <li class="flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    Specialization in Cloud Computing and Distributed Systems
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    GPA: 3.8/4.0
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    Research Focus: Container Orchestration
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Education 2 -->
+              <div class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                  <h3 class="text-xl font-bold text-green-400 font-mono">Bachelor of Engineering in Computer Science</h3>
+                  <span class="text-gray-400 font-mono text-sm">2011 - 2015</span>
+                </div>
+                <h4 class="text-gray-300 font-mono mb-2">> Engineering Institute</h4>
+                <ul class="text-gray-400 font-mono space-y-2 mt-4">
+                  <li class="flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    Major in Software Engineering
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    GPA: 3.7/4.0
+                  </li>
+                  <li class="flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    Senior Project: Automated Deployment System
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Certifications -->
+              <div class="mt-8">
+                <span class="text-green-500 font-mono">$ cat certifications.txt</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                    <span class="text-gray-300 font-mono">AWS Certified Solutions Architect</span>
+                  </div>
+                  <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                    <span class="text-gray-300 font-mono">Certified Kubernetes Administrator</span>
+                  </div>
+                  <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                    <span class="text-gray-300 font-mono">HashiCorp Certified Terraform Associate</span>
+                  </div>
+                  <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                    <span class="text-gray-300 font-mono">Docker Certified Associate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="31f0a021-a106-402b-ab95-4c8ebe10f16d" data-section-id="31f0a021-a106-402b-ab95-4c8ebe10f16d">
+
+
+<div id="root">
+  <section id="projects" class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
+        </div>
+
+        <div class="terminal-content">
+          <span class="text-green-500 font-mono">$ ls -la /projects/*</span>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-green-400 font-mono text-lg font-bold">Cloud Infrastructure Automation</h3>
+                <span class="text-gray-500 font-mono text-sm">2023</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">Automated AWS infrastructure deployment using Terraform and Ansible</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Terraform</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">AWS</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Ansible</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">> View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-green-400 font-mono text-lg font-bold">Kubernetes Monitoring Stack</h3>
+                <span class="text-gray-500 font-mono text-sm">2022</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">Complete monitoring solution using Prometheus and Grafana</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Kubernetes</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Prometheus</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Grafana</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">> View Project</a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-green-400 font-mono text-lg font-bold">CI/CD Pipeline Framework</h3>
+                <span class="text-gray-500 font-mono text-sm">2022</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">Automated deployment pipeline using Jenkins and Docker</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Jenkins</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">GitOps</span>
+              </div>
+              <div class="flex justify-end">
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">> View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-200">
+              $ git clone more-projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</element><element id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2" data-section-id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2">
+
+
+<div id="root">
+  <section id="skills" class="bg-neutral-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">skills.sh</span>
+        </div>
+
+        <div class="terminal-content">
+          <span class="text-green-500 font-mono">$ ./display-skills.sh</span>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <!-- DevOps Skills -->
+            <div class="skill-category">
+              <h3 class="text-green-400 font-mono text-xl mb-4">> DevOps & Cloud</h3>
+              <div class="space-y-4">
+                <div class="skill-item">
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-300 font-mono">Docker</span>
+                    <span class="text-green-400 font-mono">95%</span>
+                  </div>
+                  <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                    <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 95%" data-progress="95"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-300 font-mono">Kubernetes</span>
+                    <span class="text-green-400 font-mono">90%</span>
+                  </div>
+                  <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                    <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 90%" data-progress="90"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-300 font-mono">AWS</span>
+                    <span class="text-green-400 font-mono">85%</span>
+                  </div>
+                  <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                    <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 85%" data-progress="85"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Infrastructure Skills -->
+            <div class="skill-category">
+              <h3 class="text-green-400 font-mono text-xl mb-4">> Infrastructure</h3>
+              <div class="space-y-4">
+                <div class="skill-item">
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-300 font-mono">Terraform</span>
+                    <span class="text-green-400 font-mono">88%</span>
+                  </div>
+                  <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                    <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 88%" data-progress="88"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-300 font-mono">Ansible</span>
+                    <span class="text-green-400 font-mono">82%</span>
+                  </div>
+                  <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                    <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 82%" data-progress="82"></div>
+                  </div>
+                </div>
+
+                <div class="skill-item">
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-300 font-mono">Jenkins</span>
+                    <span class="text-green-400 font-mono">87%</span>
+                  </div>
+                  <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                    <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 87%" data-progress="87"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Programming Skills -->
+            <div class="skill-category mt-8">
+              <h3 class="text-green-400 font-mono text-xl mb-4">> Programming</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Python</span>
+                </div>
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Bash</span>
+                </div>
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Go</span>
+                </div>
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">JavaScript</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category mt-8">
+              <h3 class="text-green-400 font-mono text-xl mb-4">> Tools & Platforms</h3>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Git</span>
+                </div>
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Linux</span>
+                </div>
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Prometheus</span>
+                </div>
+                <div class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                  <span class="text-gray-300 font-mono">Grafana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress-bar');
+    
+    const animateProgress = () => {
+      progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = '0%';
+        setTimeout(() => {
+          bar.style.width = `${progress}%`;
+        }, 200);
+      });
+    }
+
+    // Trigger animation when section is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateProgress();
+        }
+      });
+    });
+
+    document.querySelector('#skills').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</div>
+</element><element id="5bae4959-892f-40f8-81c2-2540d3ec6aba" data-section-id="5bae4959-892f-40f8-81c2-2540d3ec6aba">
+
+<div id="root">
+  <section id="publications" class="bg-neutral-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">publications.sh</span>
+        </div>
+
+        <div class="terminal-content">
+          <span class="text-green-500 font-mono">$ cat research_publications.md</span>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <!-- Publication 1 -->
+            <div class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-green-400 font-mono text-lg font-bold">Optimizing Container Orchestration in Cloud Environments</h3>
+                <span class="text-gray-500 font-mono text-sm">2023</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">Journal of Cloud Computing and Applications</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Cloud Computing</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Kubernetes</span>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-gray-400 font-mono text-sm">DOI: 10.1234/cloud.2023</span>
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper</a>
+              </div>
+            </div>
+
+            <!-- Publication 2 -->
+            <div class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-green-400 font-mono text-lg font-bold">Infrastructure as Code: Best Practices and Patterns</h3>
+                <span class="text-gray-500 font-mono text-sm">2022</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">DevOps Research Quarterly</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">IaC</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">DevOps</span>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-gray-400 font-mono text-sm">DOI: 10.1234/devops.2022</span>
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper</a>
+              </div>
+            </div>
+
+            <!-- Publication 3 -->
+            <div class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-green-400 font-mono text-lg font-bold">Automated Security Testing in CI/CD Pipelines</h3>
+                <span class="text-gray-500 font-mono text-sm">2022</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">Security Engineering Conference</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Security</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">CI/CD</span>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-gray-400 font-mono text-sm">DOI: 10.1234/security.2022</span>
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper</a>
+              </div>
+            </div>
+
+            <!-- Publication 4 -->
+            <div class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-green-400 font-mono text-lg font-bold">Performance Analysis of Microservices Architecture</h3>
+                <span class="text-gray-500 font-mono text-sm">2021</span>
+              </div>
+              <p class="text-gray-400 font-mono text-sm mb-4">International Journal of Software Architecture</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Microservices</span>
+                <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Performance</span>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <span class="text-gray-400 font-mono text-sm">DOI: 10.1234/arch.2021</span>
+                <a href="#" class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div></element><element id="905aecfa-d814-48a5-8219-26f90e0c44bc" data-section-id="905aecfa-d814-48a5-8219-26f90e0c44bc">
+
+<div id="root">
+  <section id="contact" class="bg-neutral-800 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+        <div class="terminal-header flex items-center mb-6">
+          <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+          <span class="ml-4 text-gray-400 font-mono text-sm">contact.sh</span>
+        </div>
+
+        <div class="terminal-content">
+          <span class="text-green-500 font-mono">$ ./send-message.sh</span>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="contact-form">
+              <form class="space-y-6">
+                <div>
+                  <label class="block text-green-400 font-mono mb-2">$ echo $NAME:</label>
+                  <input type="text" class="w-full bg-neutral-800 border border-green-500/30 rounded-lg px-4 py-2 text-gray-300 font-mono focus:outline-none focus:border-green-500 transition-colors duration-300" placeholder="_">
+                </div>
+
+                <div>
+                  <label class="block text-green-400 font-mono mb-2">$ echo $EMAIL:</label>
+                  <input type="email" class="w-full bg-neutral-800 border border-green-500/30 rounded-lg px-4 py-2 text-gray-300 font-mono focus:outline-none focus:border-green-500 transition-colors duration-300" placeholder="_">
+                </div>
+
+                <div>
+                  <label class="block text-green-400 font-mono mb-2">$ cat MESSAGE:</label>
+                  <textarea rows="4" class="w-full bg-neutral-800 border border-green-500/30 rounded-lg px-4 py-2 text-gray-300 font-mono focus:outline-none focus:border-green-500 transition-colors duration-300" placeholder="_"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-3 px-6 rounded-lg transition-colors duration-300">
+                  $ send_message.exe
+                </button>
+              </form>
+            </div>
+
+            <div class="contact-info space-y-8">
+              <div>
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Contact Information</h3>
+                <div class="space-y-3">
+                  <p class="text-gray-300 font-mono flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    email: contact@example.com
+                  </p>
+                  <p class="text-gray-300 font-mono flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    location: San Francisco, CA
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Social Links</h3>
+                <div class="flex flex-wrap gap-4">
+                  <a href="#" class="bg-neutral-800 border border-green-500/30 hover:border-green-500 px-4 py-2 rounded-lg text-gray-300 font-mono transition-colors duration-300 flex items-center">
+                    <span class="text-green-500 mr-2">></span>
+                    GitHub
+                  </a>
+                  <a href="#" class="bg-neutral-800 border border-green-500/30 hover:border-green-500 px-4 py-2 rounded-lg text-gray-300 font-mono transition-colors duration-300 flex items-center">
+                    <span class="text-green-500 mr-2">></span>
+                    LinkedIn
+                  </a>
+                  <a href="#" class="bg-neutral-800 border border-green-500/30 hover:border-green-500 px-4 py-2 rounded-lg text-gray-300 font-mono transition-colors duration-300 flex items-center">
+                    <span class="text-green-500 mr-2">></span>
+                    Twitter
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Resume</h3>
+                <a href="#" class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-300">
+                  $ download_resume.pdf
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div></element><element id="01219cd0-f928-4be0-981d-069972e95a99" data-section-id="01219cd0-f928-4be0-981d-069972e95a99">
+
+<div id="root">
+  <footer id="footer" class="bg-neutral-900 border-t border-green-500/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="terminal-prompt">
+          <span class="text-green-500 font-mono text-lg mb-4 block">$ whoami</span>
+          <p class="text-gray-400 font-mono">DevOps Engineer</p>
+          <p class="text-gray-400 font-mono">System Architect</p>
+        </div>
+
+        <div class="terminal-nav">
+          <span class="text-green-500 font-mono text-lg mb-4 block">$ ls navigation/</span>
+          <ul class="space-y-2">
+              <li>
+                <a href="/privacy" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="/terms" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > Terms
+                </a>
+              </li>
+              <li>
+                <a href="/resume" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > Resume
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > GitHub
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > LinkedIn
+                </a>
+              </li>
+          </ul>
+        </div>
+
+        <div class="terminal-social">
+          <span class="text-green-500 font-mono text-lg mb-4 block">$ ls social/</span>
+          <div class="space-y-2">
+            <a href="#" class="text-gray-400 hover:text-green-500 font-mono block transition-colors duration-200">> GitHub</a>
+            <a href="#" class="text-gray-400 hover:text-green-500 font-mono block transition-colors duration-200">> LinkedIn</a>
+            <a href="#" class="text-gray-400 hover:text-green-500 font-mono block transition-colors duration-200">> Twitter</a>
+          </div>
+        </div>
+
+        <div class="terminal-contact">
+          <span class="text-green-500 font-mono text-lg mb-4 block">$ cat contact.txt</span>
+          <p class="text-gray-400 font-mono mb-2">contact@example.com</p>
+          <p class="text-gray-400 font-mono">San Francisco, CA</p>
+        </div>
+      </div>
+
+      <div class="terminal-status mt-8 pt-8 border-t border-green-500/30">
+        <div class="flex items-center justify-between">
+          <p class="text-gray-500 font-mono text-sm">
+            <span class="text-green-500">$</span> Status: System Operational
+          </p>
+          <p class="text-gray-500 font-mono text-sm">
+            <span class="text-green-500">$</span> Last Updated: <span id="current-time"></span>
+          </p>
+        </div>
+        <p class="text-gray-500 font-mono text-sm mt-4">
+          <span class="text-green-500">$</span> © 2024 All rights reserved
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update current time
+    function updateTime() {
+      const timeElement = document.getElementById('current-time');
+      const now = new Date();
+      timeElement.textContent = now.toLocaleString();
+    }
+
+    // Update time initially and every second
+    updateTime();
+    setInterval(updateTime, 1000);
+  </script>
+</div></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
