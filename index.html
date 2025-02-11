@@ -312,7 +312,7 @@
       cursor: url("https://cdn-icons-png.flaticon.com/512/5987/5987462.png"), auto;
     }
 
-    /* Popup Styles */
+    /* Popup Styles (Mobile-Friendly) */
     .popup {
       display: none;
       position: fixed;
@@ -325,7 +325,9 @@
       box-shadow: 0 5px 15px rgba(0, 255, 100, 0.2);
       z-index: 1000;
       width: 90%;
-      max-width: 600px;
+      max-width: 800px;
+      max-height: 100vh;
+      overflow-y: auto;
       border-radius: 8px;
     }
 
@@ -348,6 +350,25 @@
 
     .popup ul {
       padding-left: 15px;
+    }
+
+    @media (max-width: 640px) {
+      .popup {
+        width: 95%;
+        max-width: 90%;
+        max-height: 85vh;
+        padding: 15px;
+      }
+
+      .terminal-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .terminal-header button {
+        margin-top: 10px;
+        align-self: flex-end;
+      }
     }
   </style>
 </head>
@@ -372,8 +393,6 @@
   });
 </script>
 
-
-
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
 
   <!-- Skip to main content link for accessibility -->
@@ -396,19 +415,10 @@
     class="fixed bottom-6 right-6 bg-green-500 text-black font-mono p-3 rounded-full shadow-md transition-opacity duration-300 hidden">
     ↑
   </button>
-
-
-  <!-- {bodyScripts} -->
-
 </body>
-
 </html>
 
-
-
 <element id="06645902-0e20-4298-ba47-fabda2ca0fe9" data-section-id="06645902-0e20-4298-ba47-fabda2ca0fe9">
-
-
   <div id="root">
     <nav class="fixed w-full z-50 bg-neutral-900 border-b border-neutral-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -826,92 +836,37 @@
             <span class="text-green-500 font-mono">$ ls -la /projects/</span>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              <style>
-                /* Back to Top Button Animation */
-                #back-to-top {
-                  opacity: 0;
-                  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-                }
-
-                #back-to-top.opacity-100 {
-                  opacity: 1;
-                  transform: translateY(-5px);
-                }
-
-                /* Project Card Hover Effect */
-                .project-card {
-                  transition: transform 0.3s ease, box-shadow 0.3s ease;
-                }
-
-                .project-card:hover {
-                  transform: translateY(-5px) scale(1.02);
-                  box-shadow: 0 10px 20px rgba(0, 255, 100, 0.2);
-                }
-
-                /* Custom Terminal Cursor */
-                body {
-                  cursor: url("https://cdn-icons-png.flaticon.com/512/5987/5987462.png"), auto;
-                }
-
-                /* Popup Styles */
-                .popup {
-                  display: none;
-                  position: fixed;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  background: #1a1a1a;
-                  padding: 20px;
-                  border: 1px solid #00ff00;
-                  box-shadow: 0 5px 15px rgba(0, 255, 100, 0.2);
-                  z-index: 1000;
-                }
-
-                .popup-overlay {
-                  display: none;
-                  position: fixed;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  background: rgba(0, 0, 0, 0.7);
-                  z-index: 999;
-                }
-              </style>
 
               <!-- Project 1 -->
-              <div
-                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
                 <div class="flex items-center justify-between mb-4">
                   <h3 class="text-green-400 font-mono text-lg font-bold">Cafeteria Management System</h3>
                   <span class="text-gray-500 font-mono text-sm">2024</span>
                 </div>
-                <p class="text-gray-400 font-mono text-sm mb-4">A full-stack application built from scratch to
-                  streamline cafeteria management, with a focus on seamless deployment and scalability
-                </p>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">A full-stack application built from scratch to streamline cafeteria management, with a focus on seamless deployment and scalability 🍽️📅⚙️</p>
                 <div class="flex flex-wrap gap-2 mb-4">
                   <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Travis</span>
                   <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
                 </div>
-                <div class="flex justify-end">
-                  <button onclick="openPopup()"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                <div class="flex justify-end mt-auto">
+                  <button onclick="openPopup1()" class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
                 </div>
               </div>
+              
 
               <!-- Popup Overlay -->
-              <div class="popup-overlay" id="popup-overlay" onclick="closePopup()"></div>
+              <div class="popup-overlay" id="popup-overlay1" onclick="closePopup1()"></div>
 
               <!-- Popup Content -->
-              <div class="popup" id="popup">
+              <div class="popup" id="popup1">
                 <div class="terminal-header flex items-center justify-between mb-6">
                   <div class="flex items-center">
                     <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
                     <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
                     <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                    <span class="ml-4 text-gray-400 font-mono text-sm">cat cafeteria_management_system.md</span>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">cafeteria_management_system.md</span>
                   </div>
-                  <button onclick="closePopup()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                  <button onclick="closePopup1()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
                     Close</button>
                 </div>
                 <div class="popup-content">
@@ -926,200 +881,158 @@
                 </div>
               </div>
 
-              <script>
-                function openPopup() {
-                  document.getElementById("popup").style.display = "block";
-                  document.getElementById("popup-overlay").style.display = "block";
-                }
-
-                function closePopup() {
-                  document.getElementById("popup").style.display = "none";
-                  document.getElementById("popup-overlay").style.display = "none";
-                }
-              </script>
-
-
               <!-- Project 2 -->
-              <div
-                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
                 <div class="flex items-center justify-between mb-4">
                   <h3 class="text-green-400 font-mono text-lg font-bold">BioCube</h3>
                   <span class="text-gray-500 font-mono text-sm">2024</span>
                 </div>
-                <p class="text-gray-400 font-mono text-sm mb-4">Automated deployment pipeline using Jenkins and Docker
-                </p>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed BioCube, a hybrid encryption framework that enhances biometric security using BioHashing, barcode encoding, and pseudo-random transformations 🔒🧬</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Jenkins</span>
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">GitOps</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image Processing</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Cryptography</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Python</span>
                 </div>
-                <div class="flex justify-end">
-                  <button onclick="openPopup()"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                <div class="flex justify-end mt-auto">
+                  <button onclick="openPopup2()" class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
                 </div>
               </div>
+              
 
               <!-- Popup Overlay -->
-              <div class="popup-overlay" id="popup-overlay" onclick="closePopup()"></div>
+              <div class="popup-overlay" id="popup-overlay2" onclick="closePopup2()"></div>
 
               <!-- Popup Content -->
-              <div class="popup" id="popup">
-                <div class="terminal-header flex items-center mb-6">
-                  <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
-                  <button onclick="closePopup()"
-                    class="ml-auto text-green-500 hover:text-green-400 font-mono text-sm">[x] Close</button>
+              <div class="popup" id="popup2">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">biocube.md</span>
+                  </div>
+                  <button onclick="closePopup2()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
                 </div>
-                <h3 class="text-green-400 font-mono text-lg font-bold">CI/CD Pipeline Framework</h3>
-                <p class="text-gray-400 font-mono text-sm mb-4">A comprehensive CI/CD pipeline built using Jenkins,
-                  Docker, and GitOps to automate deployments.</p>
-                <ul class="text-gray-300 font-mono text-sm mb-4">
-                  <li>- Configured automated testing and build processes</li>
-                  <li>- Integrated GitOps workflows for seamless deployments</li>
-                  <li>- Ensured high availability and fault tolerance</li>
-                </ul>
-                <div class="flex justify-end">
-                  <a href="#"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
-                    View Project</a>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">BioCube</h3>
+                  <p class="text-gray-400 font-mono text-sm">Developed BioCube, a hybrid encryption framework that
+                    enhances biometric security using BioHashing, barcode encoding, and pseudo-random transformations
+                  </p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2 pl-10">
+                    <li>- Designed a biometric encryption framework to securely transform fingerprint-vein data</li>
+                    <li>- Developed novel encoding algorithm to generate secure biometric templates</li>
+                    <li>- Implemented novel Infinity Cube Transformations to enhance unlinkability and reusability</li>
+                  </ul>
+                  <div class="flex justify-end">
+                    <a href="https://github.com/Rohanjos97/BioCube"
+                      target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                      View Project</a>
+                  </div>
                 </div>
               </div>
 
-              <script>
-                function openPopup() {
-                  document.getElementById("popup").style.display = "block";
-                  document.getElementById("popup-overlay").style.display = "block";
-                }
-
-                function closePopup() {
-                  document.getElementById("popup").style.display = "none";
-                  document.getElementById("popup-overlay").style.display = "none";
-                }
-              </script>
-
-
               <!-- Project 3 -->
-              <div
-                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
                 <div class="flex items-center justify-between mb-4">
                   <h3 class="text-green-400 font-mono text-lg font-bold">Auto Inpainting</h3>
                   <span class="text-gray-500 font-mono text-sm">2023</span>
                 </div>
-                <p class="text-gray-400 font-mono text-sm mb-4">Automated deployment pipeline using Jenkins and Docker
-                </p>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed an adversarial patch defense system that detects and removes adversarial patches restoring model accuracy in a black-box setting 🖼️🛠️</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Jenkins</span>
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">GitOps</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer Vision</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image Inpainting</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Deep Learning</span>
                 </div>
-                <div class="flex justify-end">
-                  <button onclick="openPopup()"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                <div class="flex justify-end mt-auto">  <!-- Ensures button stays at bottom -->
+                  <button onclick="openPopup3()" class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
                 </div>
               </div>
+              
 
               <!-- Popup Overlay -->
-              <div class="popup-overlay" id="popup-overlay" onclick="closePopup()"></div>
+              <div class="popup-overlay" id="popup-overlay3" onclick="closePopup3()"></div>
 
               <!-- Popup Content -->
-              <div class="popup" id="popup">
-                <div class="terminal-header flex items-center mb-6">
-                  <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
-                  <button onclick="closePopup()"
-                    class="ml-auto text-green-500 hover:text-green-400 font-mono text-sm">[x] Close</button>
+              <div class="popup" id="popup3">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">auto_inpainting.md</span>
+                  </div>
+                  <button onclick="closePopup3()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
                 </div>
-                <h3 class="text-green-400 font-mono text-lg font-bold">CI/CD Pipeline Framework</h3>
-                <p class="text-gray-400 font-mono text-sm mb-4">A comprehensive CI/CD pipeline built using Jenkins,
-                  Docker, and GitOps to automate deployments.</p>
-                <ul class="text-gray-300 font-mono text-sm mb-4">
-                  <li>- Configured automated testing and build processes</li>
-                  <li>- Integrated GitOps workflows for seamless deployments</li>
-                  <li>- Ensured high availability and fault tolerance</li>
-                </ul>
-                <div class="flex justify-end">
-                  <a href="#"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
-                    View Project</a>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">Auto Inpainting</h3>
+                  <p class="text-gray-400 font-mono text-sm">Developed an adversarial patch defense system that detects and removes adversarial patches restoring model accuracy in a black-box setting</p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2">
+                    <li>- Developed a black-box defense to remove adversarial patches without retraining</li>
+                    <li>- Used Class Activation Map for automatic attack region detection</li>
+                    <li>- Compared different inpainting techniques based on accuracy to determine their suitability</li>
+                  </ul>
+                  <div class="flex justify-end">
+                    <a href="https://github.com/Rohanjos97/auto_inpainting"
+                      target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                      View Project</a>
+                  </div>
                 </div>
               </div>
 
-              <script>
-                function openPopup() {
-                  document.getElementById("popup").style.display = "block";
-                  document.getElementById("popup-overlay").style.display = "block";
-                }
-
-                function closePopup() {
-                  document.getElementById("popup").style.display = "none";
-                  document.getElementById("popup-overlay").style.display = "none";
-                }
-              </script>
-
-
               <!-- Project 4 -->
-              <div
-                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group">
+              <div class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
                 <div class="flex items-center justify-between mb-4">
                   <h3 class="text-green-400 font-mono text-lg font-bold">Basketball Prediction</h3>
                   <span class="text-gray-500 font-mono text-sm">2022</span>
                 </div>
-                <p class="text-gray-400 font-mono text-sm mb-4">Automated deployment pipeline using Jenkins and Docker
-                </p>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Built an AI-powered model to predict whether a basketball shot will land in the hoop using machine learning 🚀🏀</p>
                 <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Jenkins</span>
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
-                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">GitOps</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer Vision</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Object Detection</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Machine Learning</span>
                 </div>
-                <div class="flex justify-end">
-                  <button onclick="openPopup()"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                <div class="flex justify-end mt-auto">
+                  <button onclick="openPopup4()" class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
                 </div>
               </div>
+              
 
               <!-- Popup Overlay -->
-              <div class="popup-overlay" id="popup-overlay" onclick="closePopup()"></div>
+              <div class="popup-overlay" id="popup-overlay4" onclick="closePopup4()"></div>
 
               <!-- Popup Content -->
-              <div class="popup" id="popup">
-                <div class="terminal-header flex items-center mb-6">
-                  <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
-                  <button onclick="closePopup()"
-                    class="ml-auto text-green-500 hover:text-green-400 font-mono text-sm">[x] Close</button>
+              <!-- Popup Content -->
+              <div class="popup" id="popup4">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">basketbasll_prediction.md</span>
+                  </div>
+                  <button onclick="closePopup4()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
                 </div>
-                <h3 class="text-green-400 font-mono text-lg font-bold">CI/CD Pipeline Framework</h3>
-                <p class="text-gray-400 font-mono text-sm mb-4">A comprehensive CI/CD pipeline built using Jenkins,
-                  Docker, and GitOps to automate deployments.</p>
-                <ul class="text-gray-300 font-mono text-sm mb-4">
-                  <li>- Configured automated testing and build processes</li>
-                  <li>- Integrated GitOps workflows for seamless deployments</li>
-                  <li>- Ensured high availability and fault tolerance</li>
-                </ul>
-                <div class="flex justify-end">
-                  <a href="#"
-                    class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
-                    View Project</a>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">Basketball Prediction</h3>
+                  <p class="text-gray-400 font-mono text-sm">Built an AI-powered model to predict whether a basketball shot will land in the hoop using machine learning</p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2">
+                    <li>- Extracted the basketball from images and tracked it in video frames using object detection</li>
+                    <li>- Processed real-time video buffer to analyze ball trajectory and movement</li>
+                    <li>- Applied regression models to predict whether the shot would land in the hoop</li>
+                  </ul>
+                  <div class="flex justify-end">
+                    <a href="https://github.com/Rohanjos97/basketball_prediction"
+                      target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                      View Project</a>
+                  </div>
                 </div>
               </div>
-
-              <script>
-                function openPopup() {
-                  document.getElementById("popup").style.display = "block";
-                  document.getElementById("popup-overlay").style.display = "block";
-                }
-
-                function closePopup() {
-                  document.getElementById("popup").style.display = "none";
-                  document.getElementById("popup-overlay").style.display = "none";
-                }
-              </script>
 
             </div>
 
@@ -1258,14 +1171,44 @@
 
     <script>
 
-      function openPopup() {
-        document.getElementById("popup").style.display = "block";
-        document.getElementById("popup-overlay").style.display = "block";
+      function openPopup1() {
+        document.getElementById("popup1").style.display = "block";
+        document.getElementById("popup-overlay1").style.display = "block";
       }
 
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-        document.getElementById("popup-overlay").style.display = "none";
+      function closePopup1() {
+        document.getElementById("popup1").style.display = "none";
+        document.getElementById("popup-overlay1").style.display = "none";
+      }
+
+      function openPopup2() {
+        document.getElementById("popup2").style.display = "block";
+        document.getElementById("popup-overlay2").style.display = "block";
+      }
+
+      function closePopup2() {
+        document.getElementById("popup2").style.display = "none";
+        document.getElementById("popup-overlay2").style.display = "none";
+      }
+
+      function openPopup3() {
+        document.getElementById("popup3").style.display = "block";
+        document.getElementById("popup-overlay3").style.display = "block";
+      }
+
+      function closePopup3() {
+        document.getElementById("popup3").style.display = "none";
+        document.getElementById("popup-overlay3").style.display = "none";
+      }
+
+      function openPopup4() {
+        document.getElementById("popup4").style.display = "block";
+        document.getElementById("popup-overlay4").style.display = "block";
+      }
+
+      function closePopup4() {
+        document.getElementById("popup4").style.display = "none";
+        document.getElementById("popup-overlay4").style.display = "none";
       }
 
       // Animate progress bars on scroll
