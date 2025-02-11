@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{project.meta.ogDescription}}">
+  <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="{{project.meta.robotsMeta}}">
+
+  <title>Rohan Joshi | $ ./deploy-career.sh</title>
+  <!-- SEO Description -->
+  <meta name="description"
+    content="Portfolio of Rohan Joshi, showcasing my journey from education to various projects in DevOps, AI, and Software Development.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
+
+  <link href="{{fontLink}}" rel="stylesheet">
+  <link href="{{secondaryFontLink}}" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
+
+  <!-- Performance optimization: Preload critical resources -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script type="application/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '{{settings.colors.primary}}',
+                50: '#f8f8f8',
+                100: '#e8e8e8',
+                200: '#d3d3d3',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#525252',
+                600: '#404040',
+                700: '#262626',
+                800: '#171717',
+                900: '#0a0a0a',
+                950: '#030303',
+              },
+              secondary: {
+                DEFAULT: '{{settings.colors.secondary}}',
+                50: '#f8f8f8',
+                100: '#e8e8e8',
+                200: '#d3d3d3',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#525252',
+                600: '#404040',
+                700: '#262626',
+                800: '#171717',
+                900: '#0a0a0a',
+                950: '#030303',
+              },
+              accent: {
+                DEFAULT: '{{settings.colors.accent}}',
+                50: '#f8f8f8',
+                100: '#e8e8e8',
+                200: '#d3d3d3',
+                300: '#a3a3a3',
+                400: '#737373',
+                500: '#525252',
+                600: '#404040',
+                700: '#262626',
+                800: '#171717',
+                900: '#0a0a0a',
+                950: '#030303',
+              },
+            },
+            fontFamily: {
+              sans: ['{{settings.fonts.primary}}', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+              heading: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+              body: ['{{settings.fonts.secondary}}', 'system-ui', 'sans-serif'],
+            },
+            spacing: {
+              '18': '4.5rem',
+              '22': '5.5rem',
+              '30': '7.5rem',
+            },
+            maxWidth: {
+              '8xl': '88rem',
+              '9xl': '96rem',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in',
+              'fade-out': 'fadeOut 0.5s ease-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+              'slide-down': 'slideDown 0.5s ease-out',
+              'slide-left': 'slideLeft 0.5s ease-out',
+              'slide-right': 'slideRight 0.5s ease-out',
+              'scale-in': 'scaleIn 0.5s ease-out',
+              'scale-out': 'scaleOut 0.5s ease-out',
+              'spin-slow': 'spin 3s linear infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 3s infinite',
+              'float': 'float 3s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeOut: {
+                '0%': { opacity: '1' },
+                '100%': { opacity: '0' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideDown: {
+                '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideLeft: {
+                '0%': { transform: 'translateX(20px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              slideRight: {
+                '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.9)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              scaleOut: {
+                '0%': { transform: 'scale(1.1)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+            },
+            aspectRatio: {
+              'portrait': '3/4',
+              'landscape': '4/3',
+              'ultrawide': '21/9',
+            },
+          },
+        },
+        variants: {
+          extend: {
+            opacity: ['disabled'],
+            cursor: ['disabled'],
+            backgroundColor: ['active', 'disabled'],
+            textColor: ['active', 'disabled'],
+          },
+        },
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+
+      window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          if (window.scrollY >= sectionTop - 50) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        // Handle last section (Contact)
+        const bottomOffset = document.documentElement.scrollHeight - window.innerHeight;
+        if (window.scrollY >= bottomOffset - 10) {
+          current = sections[sections.length - 1].getAttribute('id'); // Ensure last section is highlighted
+        }
+
+        navLinks.forEach(link => {
+          link.classList.remove('text-green-500');
+          if (link.getAttribute('href').includes(current)) {
+            link.classList.add('text-green-500');
+          }
+        });
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const backToTopBtn = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove("hidden");
+          backToTopBtn.classList.add("opacity-100");
+        } else {
+          backToTopBtn.classList.add("hidden");
+          backToTopBtn.classList.remove("opacity-100");
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    function openPopup1() {
+      document.getElementById("popup1").style.display = "block";
+      document.getElementById("popup-overlay1").style.display = "block";
+    }
+
+    function closePopup1() {
+      document.getElementById("popup1").style.display = "none";
+      document.getElementById("popup-overlay1").style.display = "none";
+    }
+
+    function openPopup2() {
+      document.getElementById("popup2").style.display = "block";
+      document.getElementById("popup-overlay2").style.display = "block";
+    }
+
+    function closePopup2() {
+      document.getElementById("popup2").style.display = "none";
+      document.getElementById("popup-overlay2").style.display = "none";
+    }
+
+    function openPopup3() {
+      document.getElementById("popup3").style.display = "block";
+      document.getElementById("popup-overlay3").style.display = "block";
+    }
+
+    function closePopup3() {
+      document.getElementById("popup3").style.display = "none";
+      document.getElementById("popup-overlay3").style.display = "none";
+    }
+
+    function openPopup4() {
+      document.getElementById("popup4").style.display = "block";
+      document.getElementById("popup-overlay4").style.display = "block";
+    }
+
+    function closePopup4() {
+      document.getElementById("popup4").style.display = "none";
+      document.getElementById("popup-overlay4").style.display = "none";
+    }
+
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    const animateProgress = () => {
+      progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = '0%';
+        setTimeout(() => {
+          bar.style.width = `${progress}%`;
+        }, 200);
+      });
+    }
+
+    // Trigger animation when section is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateProgress();
+        }
+      });
+    });
+
+    document.querySelector('#skills').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <!-- Optimized Font Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Dynamic Meta Tags -->
+  <meta name="description" content="{{project.meta.ogDescription}}">
+  <meta name="keywords" content="{{project.meta.keywords}}">
+  <meta name="robots" content="{{project.meta.robotsMeta}}">
+  <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+  <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+  <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+  <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+  <meta property="og:title" content="{{project.meta.ogTitle}}">
+  <meta property="og:description" content="{{project.meta.ogDescription}}">
+  <meta property="og:image" content="{{project.meta.ogImage}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="{{project.name}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+  <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+  <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+  <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
+
+  <style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: {
+          {
+          settings.fonts.primary
+        }
+      }
+
+      ,
+      system-ui,
+      sans-serif;
+    }
+
+    body {
+      font-family: {
+          {
+          settings.fonts.secondary
+        }
+      }
+
+      ,
+      system-ui,
+      sans-serif;
+    }
+
+    /* Project Card Hover Effect */
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 255, 100, 0.2);
+    }
+
+    /* Back to Top Button Animation */
+    #back-to-top {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+    #back-to-top.opacity-100 {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+
+    /* Project Card Hover Effect */
+    .project-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 10px 20px rgba(0, 255, 100, 0.2);
+    }
+
+    /* Custom Terminal Cursor */
+    body {
+      cursor: url("https://cdn-icons-png.flaticon.com/512/5987/5987462.png"), auto;
+    }
+
+    /* Popup Styles (Mobile-Friendly) */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #1a1a1a;
+      padding: 25px;
+      border: 1px solid #00ff00;
+      box-shadow: 0 5px 15px rgba(0, 255, 100, 0.2);
+      z-index: 1000;
+      width: 90%;
+      max-width: 800px;
+      max-height: 100vh;
+      overflow-y: auto;
+      border-radius: 8px;
+    }
+
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+    }
+
+    .popup-content {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .popup ul {
+      padding-left: 15px;
+    }
+
+    @media (max-width: 640px) {
+      .popup {
+        width: 95%;
+        max-width: 90%;
+        max-height: 85vh;
+        padding: 15px;
+      }
+
+      .terminal-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .terminal-header button {
+        margin-top: 10px;
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+
+<body class="antialiased text-gray-800 min-h-screen flex flex-col">
+
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header class="relative z-50 bg-white dark:bg-gray-900">
+    <!-- Header content goes here -->
+  </header>
+
+  <!-- Main content area -->
+  <main id="main-content" class="flex-1 relative">
+    <!-- Content will be injected here -->
+  </main>
+
+  <button id="back-to-top"
+    class="fixed bottom-6 right-6 bg-green-500 text-black font-mono p-3 rounded-full shadow-md transition-opacity duration-300 hidden">
+    ↑
+  </button>
+</body>
+
+</html>
+
+<element id="06645902-0e20-4298-ba47-fabda2ca0fe9" data-section-id="06645902-0e20-4298-ba47-fabda2ca0fe9">
+  <div id="root">
+    <nav class="fixed w-full z-50 bg-neutral-900 border-b border-neutral-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="text-green-500 font-mono text-xl">></div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#hero"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Home</a>
+              <a href="#about"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">About</a>
+              <a href="#experience"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Experience</a>
+              <a href="#education"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Education</a>
+              <a href="#projects"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Projects</a>
+              <a href="#skills"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Skills</a>
+              <a href="#publications"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Publications</a>
+              <a href="#contact"
+                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Contact</a>
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-400 hover:text-white">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-b border-neutral-800">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#hero"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Home</a>
+          <a href="#about"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">About</a>
+          <a href="#experience"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Experience</a>
+          <a href="#education"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Education</a>
+          <a href="#projects"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Projects</a>
+          <a href="#skills"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Skills</a>
+          <a href="#publications"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Publications</a>
+          <a href="#contact"
+            class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero" class="bg-neutral-900 min-h-[70vh] flex items-center pt-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-green-500 font-mono text-4xl md:text-6xl font-bold animate__animated animate__fadeIn">
+            <span class="typing-text"></span><span class="cursor">|</span>
+          </h1>
+          <p
+            class="mt-6 text-gray-400 text-xl md:text-2xl font-mono animate__animated animate__fadeIn animate__delay-1s">
+            DevOps Engineer | Embracing Automation and Continuous Integration | Tech Enthusiast
+          </p>
+          <div class="mt-10 animate__animated animate__fadeIn animate__delay-2s">
+            <a href="#contact"
+              class="bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-3 px-8 rounded-lg transition-colors duration-200">
+              > Contact Me_
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      const text1 = "> Initializing...";
+      const text2 = "Hello World! I'm Rohan Joshi...";
+      const typingText = document.querySelector('.typing-text');
+
+      let i = 0;
+
+      function typeWriterText1() {
+        if (i < text1.length) {
+          typingText.textContent += text1.charAt(i);
+          i++;
+          setTimeout(typeWriterText1, 100);
+        } else {
+          // After text1 is typed, wait for a bit, then clear the text
+          setTimeout(() => {
+            typingText.textContent = ""; // Clear text
+            i = 0; // Reset counter for text2
+            typeWriterText2(); // Start typing text2
+          }, 1000); // Delay before clearing
+        }
+      }
+
+      function typeWriterText2() {
+        if (i < text2.length) {
+          typingText.textContent += text2.charAt(i);
+          i++;
+          setTimeout(typeWriterText2, 100);
+        }
+      }
+
+      // Start typing effect after page load
+      window.addEventListener('load', typeWriterText1);
+
+      // Cursor blink effect
+      const cursor = document.querySelector('.cursor');
+      setInterval(() => {
+        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+      }, 500);
+    </script>
+  </div>
+</element>
+<element id="09fe1771-e728-460d-871b-14ac9722494c" data-section-id="09fe1771-e728-460d-871b-14ac9722494c">
+
+  <div id="root">
+    <section id="about" class="bg-neutral-800 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-4">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">about.sh</span>
+          </div>
+
+          <div class="terminal-content space-y-4">
+            <div class="animate__animated animate__fadeIn">
+              <span class="text-green-500 font-mono">$ whoami</span>
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-200 font-mono mt-2">Aspiring DevOps Engineer and Tech
+                Enthusiast</h2>
+            </div>
+
+            <div class="animate__animated animate__fadeIn animate__delay-1s">
+              <span class="text-green-500 font-mono">$ cat about.txt</span>
+              <div class="text-gray-300 font-mono mt-2 leading-relaxed">
+                <p class="mb-4">
+                  > Versatile and results-driven professional with over 3 years of experience, excelling in dynamic and
+                  fast-paced environments
+                </p>
+                <p class="mb-4">
+                  > Passionate about automating infrastructure and optimizing deployment pipelines
+                </p>
+                <p class="mb-4">
+                  > Specialized in containerization, CI/CD implementation, and cloud-native architecture
+                </p>
+                <p>
+                  > Currently focused on implementing scalable solutions and advancing cloud infrastructure automation
+                </p>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeIn animate__delay-2s mt-8">
+              <span class="text-green-500 font-mono">$ ./show-tech-stack.sh</span>
+              <div class="flex flex-wrap gap-3 mt-4">
+                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Python Scripting</span>
+                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Shell Scripting</span>
+                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Python
+                  Programming</span>
+                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Docker</span>
+                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Kubernetes</span>
+                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">OpenShift</span>
+              </div>
+            </div>
+
+            <div class="animate__animated animate__fadeIn animate__delay-3s mt-8">
+              <span class="text-green-500 font-mono">$ cat hobbies.txt</span>
+              <div class="text-gray-300 font-mono mt-2 leading-relaxed">
+                <p class="mb-4">> Enjoying outdoor play sessions with my German Shepherd 🐕</p>
+                <p class="mb-4">> Diving into immersive RPGs and story-driven games 🎮</p>
+                <p class="mb-4">> Strumming melodies on the ukulele 🎵</p>
+                <p class="mb-4">> Challenging myself with logic puzzles like Sudoku 🧩</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</element>
+<element id="8e47cb49-fbf0-479e-922e-020305748c74" data-section-id="8e47cb49-fbf0-479e-922e-020305748c74">
+
+  <div id="root">
+    <section id="experience" class="bg-neutral-900 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-6">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">work_experience.sh</span>
+          </div>
+
+          <div class="terminal-content space-y-8">
+            <div class="animate__animated animate__fadeIn">
+              <span class="text-green-500 font-mono">$ cat experience.log</span>
+
+              <div class="mt-6 space-y-8">
+                <!-- Experience 1 -->
+                <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Engineer</h3>
+                    <span class="text-gray-400 font-mono text-sm">July, 2024 - Present</span>
+                  </div>
+                  <h4 class="text-gray-300 font-mono mb-2">IBM India Software Lab, Gandhinagar, India</h4>
+                  <ul class="text-gray-400 font-mono space-y-2">
+                    <li>> Automate deployment pipelines using Python/Shell scripting</li>
+                    <li>> MManage Kubernetes and OpenShift (OCP) deployments for seamless rollouts</li>
+                    <li>> Optimize CI/CD workflows with Travis CI</li>
+                    <li>> Working closely with dev and ops teams to streamline deployments</li>
+                    <li>> Enhanced release processes by reducing manual interventions</li>
+                  </ul>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Intern</h3>
+                    <span class="text-gray-400 font-mono text-sm">Jan, 2024 - July, 2024</span>
+                  </div>
+                  <h4 class="text-gray-300 font-mono mb-2">IBM India Software Lab, Gandhinagar, India</h4>
+                  <ul class="text-gray-400 font-mono space-y-2">
+                    <li>> Gained hands-on experience with CI/CD processes, learning to automate deployments</li>
+                    <li>> Developed Shell and Python scripts for basic automation tasks and system monitoring</li>
+                    <li>> Explored Kubernetes and OpenShift, assisting in deployment and troubleshooting</li>
+                    <li>> Worked with Travis CI, setting up simple pipelines and understanding build workflows</li>
+                    <li>> Reduced deployment time by 70% through CI/CD pipeline optimization</li>
+                    <li>> Collaborated with senior engineers, gaining insights into DevOps best practices</li>
+                  </ul>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-green-400 font-mono">Machine Learning Intern</h3>
+                    <span class="text-gray-400 font-mono text-sm">May, 2023 - July, 2023</span>
+                  </div>
+                  <h4 class="text-gray-300 font-mono mb-2">Clomotech, Gandhinagar, India</h4>
+                  <ul class="text-gray-400 font-mono space-y-2">
+                    <li>> Developed an ML-based solution to predict SPY (S&P 500 ETF) using a 5-minute timeframe dataset
+                    </li>
+                    <li>> Utilized hybrid time-series models, AutoML, and classification techniques to improve accuracy
+                      and performance</li>
+                    <li>> Optimized predictive models for enhanced reliability in financial market forecasting</li>
+                  </ul>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-green-400 font-mono">Software Engineer</h3>
+                    <span class="text-gray-400 font-mono text-sm">Jan, 2019 - Jan, 2021</span>
+                  </div>
+                  <h4 class="text-gray-300 font-mono mb-2">Oracle Cerner, Bangalore, India</h4>
+                  <ul class="text-gray-400 font-mono space-y-2">
+                    <li>> Assumed primary responsibility for front-end development</li>
+                    <li>> Established best practices to ensure code quality and team-wide maintainability</li>
+                    <li>> Leading feature implementation and bug resolution to ensure seamless functionality</li>
+                    <li>> Supported new team members in application onboarding and resolving technical roadblocks</li>
+                    <li>> Built fast and responsive websites using React and JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</element>
+<element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
+
+  <div id="root">
+    <section id="education" class="bg-neutral-800 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-6">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">education.sh</span>
+          </div>
+
+          <div class="terminal-content">
+            <div class="animate__animated animate__fadeIn">
+              <span class="text-green-500 font-mono">$ ls -la /education/</span>
+
+              <div class="mt-6 space-y-6">
+                <!-- Education 1 -->
+                <div
+                  class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-green-400 font-mono"> M.Tech in Information and Communication
+                      Technology (ICT)</h3>
+                    <span class="text-gray-400 font-mono text-sm">2022 - 2024</span>
+                  </div>
+                  <h4 class="text-gray-300 font-mono mb-2">> Dhirubhai Ambani University</h4>
+                  <h4 class="text-gray-300 font-mono mb-2"> &nbsp; formerly known as Dhirubhai Ambani Institute of
+                    Information and Communication Technology</h4>
+                  <ul class="text-gray-400 font-mono space-y-2 mt-4">
+                    <li class="flex items-center">
+                      <span class="text-green-500 mr-2">$</span>
+                      Specialization in Machine Learning (ML)
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-green-500 mr-2">$</span>
+                      CGPA: 9.18/10.0
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-green-500 mr-2">$</span>
+                      Research Focus: Adversarial Machine Learning, Computer Vision
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Education 2 -->
+                <div
+                  class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
+                  <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                    <h3 class="text-xl font-bold text-green-400 font-mono"> B.Tech in Computer Science and Engineering
+                    </h3>
+                    <span class="text-gray-400 font-mono text-sm">2015 - 2019</span>
+                  </div>
+                  <h4 class="text-gray-300 font-mono mb-2">> SRM Institute of Science and Technology</h4>
+                  <ul class="text-gray-400 font-mono space-y-2 mt-4">
+                    <li class="flex items-center">
+                      <span class="text-green-500 mr-2">$</span>
+                      Subjects: DBMS, Algorithms, Python Programming, Software Engineering
+                    </li>
+                    <li class="flex items-center">
+                      <span class="text-green-500 mr-2">$</span>
+                      GPA: 8.25/10.0
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Certifications -->
+                <div class="mt-8">
+                  <span class="text-green-500 font-mono">$ cat certifications.sh</span>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                    <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                      <a href="https://www.credly.com/badges/beba2b57-c0d4-4a6d-bb07-90852b128b82" target="_blank"
+                        class="text-gray-300 font-mono hover:text-green-400">
+                        Interskill - DevOps Fundamentals
+                      </a>
+                    </div>
+                    <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                      <a href="https://www.credly.com/badges/582bfda0-aaa5-4c54-b7bd-061231a601f8" target="_blank"
+                        class="text-gray-300 font-mono hover:text-green-400">
+                        IBM Xlence Advocate
+                      </a>
+                    </div>
+                    <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                      <a href="https://www.credly.com/badges/0b0af313-45c0-4354-9e4f-046b17d2d638" target="_blank"
+                        class="text-gray-300 font-mono hover:text-green-400">
+                        Cloud Essentials
+                      </a>
+                    </div>
+                    <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                      <a href="https://courses.cognitiveclass.ai/certificates/66d8d04f653345b8a87abf5421860696"
+                        target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                        Introduction to Cloud
+                      </a>
+                    </div>
+                    <div class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                      <a href="https://www.credly.com/badges/6ec8d6df-e222-43e0-9110-3871fadee0c5" target="_blank"
+                        class="text-gray-300 font-mono hover:text-green-400">
+                        Enterprise Design Thinking Practitioner
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</element>
+<element id="31f0a021-a106-402b-ab95-4c8ebe10f16d" data-section-id="31f0a021-a106-402b-ab95-4c8ebe10f16d">
+
+  <div id="root">
+    <section id="projects" class="bg-neutral-900 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-6">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
+          </div>
+
+          <div class="terminal-content">
+            <span class="text-green-500 font-mono">$ ls -la /projects/</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+              <!-- Project 1 -->
+              <div
+                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">Cafeteria Management System</h3>
+                  <span class="text-gray-500 font-mono text-sm">2024</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">A full-stack application built from scratch to
+                  streamline cafeteria management, with a focus on seamless deployment and scalability 🍽️📅⚙️</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Travis</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
+                </div>
+                <div class="flex justify-end mt-auto">
+                  <button onclick="openPopup1()"
+                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                </div>
+              </div>
+
+              <!-- Popup Overlay -->
+              <div class="popup-overlay" id="popup-overlay1" onclick="closePopup1()"></div>
+
+              <!-- Popup Content -->
+              <div class="popup" id="popup1">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">cafeteria_management_system.md</span>
+                  </div>
+                  <button onclick="closePopup1()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
+                </div>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">Cafeteria Management System</h3>
+                  <p class="text-gray-400 font-mono text-sm">A full-stack application built from scratch to streamline
+                    cafeteria management, with a focus on seamless deployment and scalability.</p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2">
+                    <li>- Built a CI/CD pipeline using Travis for automated deployment</li>
+                    <li>- Created and optimized Docker images for containerized application deployment</li>
+                    <li>- Deployed the application by exposing Docker container ports for accessibility</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Project 2 -->
+              <div
+                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">BioCube</h3>
+                  <span class="text-gray-500 font-mono text-sm">2024</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed BioCube, a hybrid encryption
+                  framework that enhances biometric security using BioHashing, barcode encoding, and pseudo-random
+                  transformations 🔒🧬</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image
+                    Processing</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Cryptography</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Python</span>
+                </div>
+                <div class="flex justify-end mt-auto">
+                  <button onclick="openPopup2()"
+                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                </div>
+              </div>
+
+              <!-- Popup Overlay -->
+              <div class="popup-overlay" id="popup-overlay2" onclick="closePopup2()"></div>
+
+              <!-- Popup Content -->
+              <div class="popup" id="popup2">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">biocube.md</span>
+                  </div>
+                  <button onclick="closePopup2()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
+                </div>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">BioCube</h3>
+                  <p class="text-gray-400 font-mono text-sm">Developed BioCube, a hybrid encryption framework that
+                    enhances biometric security using BioHashing, barcode encoding, and pseudo-random transformations
+                  </p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2 pl-10">
+                    <li>- Designed a biometric encryption framework to securely transform fingerprint-vein data</li>
+                    <li>- Developed novel encoding algorithm to generate secure biometric templates</li>
+                    <li>- Implemented novel Infinity Cube Transformations to enhance unlinkability and reusability</li>
+                  </ul>
+                  <div class="flex justify-end">
+                    <a href="https://github.com/Rohanjos97/BioCube" target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                      View Project</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3 -->
+              <div
+                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">Auto Inpainting</h3>
+                  <span class="text-gray-500 font-mono text-sm">2023</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed an adversarial patch defense system
+                  that detects and removes adversarial patches restoring model accuracy in a black-box setting 🖼️🛠️
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer Vision</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image
+                    Inpainting</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Deep Learning</span>
+                </div>
+                <div class="flex justify-end mt-auto"> <!-- Ensures button stays at bottom -->
+                  <button onclick="openPopup3()"
+                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                </div>
+              </div>
+
+              <!-- Popup Overlay -->
+              <div class="popup-overlay" id="popup-overlay3" onclick="closePopup3()"></div>
+
+              <!-- Popup Content -->
+              <div class="popup" id="popup3">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">auto_inpainting.md</span>
+                  </div>
+                  <button onclick="closePopup3()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
+                </div>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">Auto Inpainting</h3>
+                  <p class="text-gray-400 font-mono text-sm">Developed an adversarial patch defense system that detects
+                    and removes adversarial patches restoring model accuracy in a black-box setting</p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2">
+                    <li>- Developed a black-box defense to remove adversarial patches without retraining</li>
+                    <li>- Used Class Activation Map for automatic attack region detection</li>
+                    <li>- Compared different inpainting techniques based on accuracy to determine their suitability</li>
+                  </ul>
+                  <div class="flex justify-end">
+                    <a href="https://github.com/Rohanjos97/auto_inpainting" target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                      View Project</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 4 -->
+              <div
+                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">Basketball Prediction</h3>
+                  <span class="text-gray-500 font-mono text-sm">2022</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Built an AI-powered model to predict whether a
+                  basketball shot will land in the hoop using machine learning 🚀🏀</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer Vision</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Object
+                    Detection</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Machine
+                    Learning</span>
+                </div>
+                <div class="flex justify-end mt-auto">
+                  <button onclick="openPopup4()"
+                    class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
+                </div>
+              </div>
+
+              <!-- Popup Overlay -->
+              <div class="popup-overlay" id="popup-overlay4" onclick="closePopup4()"></div>
+
+              <!-- Popup Content -->
+              <div class="popup" id="popup4">
+                <div class="terminal-header flex items-center justify-between mb-6">
+                  <div class="flex items-center">
+                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-4 text-gray-400 font-mono text-sm">basketbasll_prediction.md</span>
+                  </div>
+                  <button onclick="closePopup4()" class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                    Close</button>
+                </div>
+                <div class="popup-content">
+                  <h3 class="text-green-400 font-mono text-xl font-bold">Basketball Prediction</h3>
+                  <p class="text-gray-400 font-mono text-sm">Built an AI-powered model to predict whether a basketball
+                    shot will land in the hoop using machine learning</p>
+                  <ul class="text-gray-300 font-mono text-sm space-y-2">
+                    <li>- Extracted the basketball from images and tracked it in video frames using object detection
+                    </li>
+                    <li>- Processed real-time video buffer to analyze ball trajectory and movement</li>
+                    <li>- Applied regression models to predict whether the shot would land in the hoop</li>
+                  </ul>
+                  <div class="flex justify-end">
+                    <a href="https://github.com/Rohanjos97/basketball_prediction" target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                      View Project</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 text-center">
+              <a href="https://github.com/Rohanjos97?tab=repositories" target="_blank"
+                class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-200">
+                $ git clone more-projects
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</element>
+<element id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2" data-section-id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2">
+
+  <div id="root">
+    <section id="skills" class="bg-neutral-800 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-6">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">skills.sh</span>
+          </div>
+
+          <div class="terminal-content">
+            <span class="text-green-500 font-mono">$ ./display-skills.sh</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <!-- DevOps Skills -->
+              <div class="skill-category">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> DevOps & Cloud</h3>
+                <div class="space-y-4">
+                  <div class="skill-item">
+                    <div class="flex justify-between mb-1">
+                      <span class="text-gray-300 font-mono">Docker</span>
+                      <span class="text-green-400 font-mono">80%</span>
+                    </div>
+                    <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                      <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 80%" data-progress="80">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="flex justify-between mb-1">
+                      <span class="text-gray-300 font-mono">Kubernetes</span>
+                      <span class="text-green-400 font-mono">75%</span>
+                    </div>
+                    <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                      <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 75%" data-progress="75">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="flex justify-between mb-1">
+                      <span class="text-gray-300 font-mono">OCP</span>
+                      <span class="text-green-400 font-mono">65%</span>
+                    </div>
+                    <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                      <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 65%" data-progress="65">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Infrastructure Skills -->
+              <div class="skill-category">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Infrastructure</h3>
+                <div class="space-y-4">
+                  <div class="skill-item">
+                    <div class="flex justify-between mb-1">
+                      <span class="text-gray-300 font-mono">Travis CI</span>
+                      <span class="text-green-400 font-mono">90%</span>
+                    </div>
+                    <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                      <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 90%" data-progress="90%">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="flex justify-between mb-1">
+                      <span class="text-gray-300 font-mono">Ansible</span>
+                      <span class="text-green-400 font-mono">30%</span>
+                    </div>
+                    <div class="w-full bg-neutral-700 rounded-full h-2.5">
+                      <div class="bg-green-500 h-2.5 rounded-full progress-bar" style="width: 30%" data-progress="30">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Programming Skills -->
+              <div class="skill-category mt-8">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Programming</h3>
+                <div class="grid grid-cols-2 gap-4">
+                  <div
+                    class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                    <span class="text-gray-300 font-mono">Python</span>
+                  </div>
+                  <div
+                    class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                    <span class="text-gray-300 font-mono">Bash</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tools -->
+              <div class="skill-category mt-8">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Tools & Platforms</h3>
+                <div class="grid grid-cols-2 gap-4">
+                  <div
+                    class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                    <span class="text-gray-300 font-mono">Git</span>
+                  </div>
+                  <div
+                    class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                    <span class="text-gray-300 font-mono">Linux</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</element>
+<element id="5bae4959-892f-40f8-81c2-2540d3ec6aba" data-section-id="5bae4959-892f-40f8-81c2-2540d3ec6aba">
+
+  <div id="root">
+    <section id="publications" class="bg-neutral-900 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-6">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">publications.sh</span>
+          </div>
+
+          <div class="terminal-content">
+            <span class="text-green-500 font-mono">$ cat research_publications.md</span>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <!-- Publication 1 -->
+              <div
+                class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">BioCube: Cancelable Biohash Encoded <br>and
+                    Infinity Cube Transformed Biometric <br>Template Generation</h3>
+                  <span class="text-gray-500 font-mono text-sm">2025</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4">Computing Conference 2025</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Biometric
+                    Security</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Cancellable
+                    Biometrics</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Finger Vein
+                    Biometric</span>
+                </div>
+                <div class="flex flex-col mt-4 space-y-2">
+                  <div class="flex justify-between items-center  mt-4">
+                    <span class="text-gray-400 font-mono text-sm">DOI: Work in progress</span>
+                    <a class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper (Coming Soon)</a>
+                  </div>
+                  <div class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
+                    <span class="font-bold text-green-400">Citation:</span>
+                    <i>Work in Progress</i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Publication 2 -->
+              <div
+                class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">Robust Adversarial Defense: An Analysis <br>on
+                    Use of Auto-Inpainting</h3>
+                  <span class="text-gray-500 font-mono text-sm">2024</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4">Journal: SN Computer Science</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial Machine
+                    Learning</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer Vision</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Inpainting</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
+                    Defense</span>
+                </div>
+                <div class="flex flex-col mt-4 space-y-2">
+                  <div class="flex justify-between items-center mt-4">
+                    <span class="text-gray-400 font-mono text-sm">DOI: 10.1007/s42979-024-03542-5</span>
+                    <a href="https://doi.org/10.1007/s42979-024-03542-5" target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper</a>
+                  </div>
+                  <div class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
+                    <span class="font-bold text-green-400">Citation:</span>
+                    Author(s). "Sharma, S., Joshi, R., Bhilare, S. et al. Robust Adversarial Defense: An Analysis on Use
+                    of Auto-Inpainting. SN COMPUT. SCI. 6, 17 (2025). https://doi.org/10.1007/s42979-024-03542-5"
+                  </div>
+                </div>
+              </div>
+
+              <!-- Publication 3 -->
+              <div
+                class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+                <div class="flex justify-between items-start mb-3">
+                  <h3 class="text-green-400 font-mono text-lg font-bold">Robust Adversarial Defence : Use of
+                    Auto-Inpainting</h3>
+                  <span class="text-gray-500 font-mono text-sm">2023</span>
+                </div>
+                <p class="text-gray-400 font-mono text-sm mb-4">Computer Analysis of Images and Patterns. CAIP 2023.
+                  Lecture Notes in Computer Science, vol 14184. Springer, Cham.</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial Machine
+                    Learning</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer Vision</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Inpainting</span>
+                  <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
+                    Defense</span>
+                </div>
+                <div class="flex flex-col mt-4 space-y-2">
+                  <div class="flex justify-between items-center mt-4">
+                    <span class="text-gray-400 font-mono text-sm">DOI: 10.1007/978-3-031-44237-7_11</span>
+                    <a href="https://doi.org/10.1007/978-3-031-44237-7_11" target="_blank"
+                      class="text-green-500 hover:text-green-400 font-mono text-sm">> Read Paper</a>
+                  </div>
+                  <div class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
+                    <span class="font-bold text-green-400">Citation:</span>
+                    Author(s). "Sharma, S., Joshi, R., Bhilare, S., Joshi, M.V. (2023). Robust Adversarial Defence: Use
+                    of Auto-inpainting. In: Tsapatsoulis, N., et al. Computer Analysis of Images and Patterns. CAIP
+                    2023. Lecture Notes in Computer Science, vol 14184. Springer, Cham.
+                    https://doi.org/10.1007/978-3-031-44237-7_11"
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</element>
+<element id="905aecfa-d814-48a5-8219-26f90e0c44bc" data-section-id="905aecfa-d814-48a5-8219-26f90e0c44bc">
+
+  <div id="root">
+    <section id="contact" class="bg-neutral-800 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg">
+          <div class="terminal-header flex items-center mb-6">
+            <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <span class="ml-4 text-gray-400 font-mono text-sm">contact.sh</span>
+          </div>
+
+          <div class="terminal-content">
+            <div class="contact-info flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
+              <!-- Contact Information -->
+              <div class="flex-1">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Contact Information</h3>
+                <div class="space-y-3">
+                  <p class="text-gray-300 font-mono flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    email: Rohanjos97@gmail.com
+                  </p>
+                  <p class="text-gray-300 font-mono flex items-center">
+                    <span class="text-green-500 mr-2">$</span>
+                    location: Gujarat, India
+                  </p>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex-1">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Social Links</h3>
+                <div class="flex flex-wrap gap-4">
+                  <a href="https://linkedin.com/in/rohanjos97" target="_blank"
+                    class="bg-neutral-800 border border-green-500/30 hover:border-green-500 px-4 py-2 rounded-lg text-gray-300 font-mono transition-colors duration-300 flex items-center">
+                    <span class="text-green-500 mr-2">></span> LinkedIn
+                  </a>
+                  <a href="https://github.com/Rohanjos97" target="_blank"
+                    class="bg-neutral-800 border border-green-500/30 hover:border-green-500 px-4 py-2 rounded-lg text-gray-300 font-mono transition-colors duration-300 flex items-center">
+                    <span class="text-green-500 mr-2">></span> GitHub
+                  </a>
+                </div>
+              </div>
+
+              <!-- Resume -->
+              <div class="flex-1">
+                <h3 class="text-green-400 font-mono text-xl mb-4">> Resume</h3>
+                <a href="https://github.com/Rohanjos97/Portfolio/blob/portfolio/Docs/rohan_joshi_resume.pdf?raw=true"
+                  class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-300">
+                  $ download_resume.pdf
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+  </div>
+</element>
+<element id="01219cd0-f928-4be0-981d-069972e95a99" data-section-id="01219cd0-f928-4be0-981d-069972e95a99">
+
+  <div id="root">
+    <footer id="footer" class="bg-neutral-900 border-t border-green-500/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="terminal-prompt">
+            <span class="text-green-500 font-mono text-lg mb-4 block">$ whoami</span>
+            <p class="text-gray-400 font-mono">DevOps Engineer</p>
+            <p class="text-gray-400 font-mono">Tech Enthusiast</p>
+          </div>
+
+          <div class="terminal-nav">
+            <span class="text-green-500 font-mono text-lg mb-4 block">$ ls navigation/</span>
+            <ul class="space-y-2">
+              <li>
+                <a href="#experience"
+                  class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > work_experience.sh
+                </a>
+              </li>
+              <li>
+                <a href="#education"
+                  class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > education.sh
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > projects.sh
+                </a>
+              </li>
+              <li>
+                <a href="#skills" class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > skills.sh
+                </a>
+              </li>
+              <li>
+                <a href="#publications"
+                  class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
+                  > publications.sh
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="terminal-social">
+            <span class="text-green-500 font-mono text-lg mb-4 block">$ ls social/</span>
+            <div class="space-y-2">
+              <a href="https://linkedin.com/in/rohanjos97" target="_blank"
+                class="text-gray-400 hover:text-green-500 font-mono block transition-colors duration-200">> LinkedIn</a>
+              <a href="https://github.com/Rohanjos97" target="_blank"
+                class="text-gray-400 hover:text-green-500 font-mono block transition-colors duration-200">> GitHub</a>
+            </div>
+          </div>
+
+          <div class="terminal-contact">
+            <span class="text-green-500 font-mono text-lg mb-4 block">$ cat contact.sh</span>
+            <p class="text-gray-400 font-mono mb-2">Rohanjos97@gmail.com</p>
+            <p class="text-gray-400 font-mono">Gujarat, India</p>
+          </div>
+        </div>
+
+        <div class="terminal-status mt-8 pt-8 border-t border-green-500/30">
+          <div class="flex items-center justify-between">
+            <p class="text-gray-500 font-mono text-sm">
+              <span class="text-green-500">$</span> Status: System Operational
+            </p>
+            <p class="text-gray-500 font-mono text-sm">
+              <span class="text-green-500">$</span> Last Updated: <span id="current-time"></span>
+            </p>
+          </div>
+          <p class="text-gray-500 font-mono text-sm mt-4">
+            <span class="text-green-500">$</span> © 2024 All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Update current time
+      function updateTime() {
+        const timeElement = document.getElementById('current-time');
+        const now = new Date();
+        timeElement.textContent = now.toLocaleString();
+      }
+
+      // Update time initially and every second
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </div>
+</element>
+</body>
+
+</html>
