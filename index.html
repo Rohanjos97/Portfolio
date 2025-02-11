@@ -11,7 +11,8 @@
 
   <title>Rohan Joshi | $ ./deploy-career.sh</title>
   <!-- SEO Description -->
-  <meta name="description" content="{{project.seoDescription}}">
+  <meta name="description"
+    content="Portfolio of Rohan Joshi, showcasing my journey from education to various projects in DevOps, AI, and Software Development.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,23 +27,17 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet">
 
-
-
   <!-- Performance optimization: Preload critical resources -->
   <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-
-
 
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Font stylesheet -->
-
   <script type="application/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
-
-  <!-- Core CSS -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -176,9 +171,7 @@
         },
       }
     });
-  </script>
 
-  <script>
     document.addEventListener('DOMContentLoaded', function () {
       const sections = document.querySelectorAll('section');
       const navLinks = document.querySelectorAll('nav a');
@@ -209,11 +202,91 @@
         });
       });
     });
-  </script>
 
-  <!-- Utilities and Components -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const backToTopBtn = document.getElementById("back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove("hidden");
+          backToTopBtn.classList.add("opacity-100");
+        } else {
+          backToTopBtn.classList.add("hidden");
+          backToTopBtn.classList.remove("opacity-100");
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    });
+
+    function openPopup1() {
+      document.getElementById("popup1").style.display = "block";
+      document.getElementById("popup-overlay1").style.display = "block";
+    }
+
+    function closePopup1() {
+      document.getElementById("popup1").style.display = "none";
+      document.getElementById("popup-overlay1").style.display = "none";
+    }
+
+    function openPopup2() {
+      document.getElementById("popup2").style.display = "block";
+      document.getElementById("popup-overlay2").style.display = "block";
+    }
+
+    function closePopup2() {
+      document.getElementById("popup2").style.display = "none";
+      document.getElementById("popup-overlay2").style.display = "none";
+    }
+
+    function openPopup3() {
+      document.getElementById("popup3").style.display = "block";
+      document.getElementById("popup-overlay3").style.display = "block";
+    }
+
+    function closePopup3() {
+      document.getElementById("popup3").style.display = "none";
+      document.getElementById("popup-overlay3").style.display = "none";
+    }
+
+    function openPopup4() {
+      document.getElementById("popup4").style.display = "block";
+      document.getElementById("popup-overlay4").style.display = "block";
+    }
+
+    function closePopup4() {
+      document.getElementById("popup4").style.display = "none";
+      document.getElementById("popup-overlay4").style.display = "none";
+    }
+
+    // Animate progress bars on scroll
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    const animateProgress = () => {
+      progressBars.forEach(bar => {
+        const progress = bar.getAttribute('data-progress');
+        bar.style.width = '0%';
+        setTimeout(() => {
+          bar.style.width = `${progress}%`;
+        }, 200);
+      });
+    }
+
+    // Trigger animation when section is in view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateProgress();
+        }
+      });
+    });
+
+    document.querySelector('#skills').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 
   <!-- Optimized Font Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -242,7 +315,6 @@
   <meta name="twitter:title" content="{{project.meta.ogTitle}}">
   <meta name="twitter:description" content="{{project.meta.ogDescription}}">
   <meta name="twitter:image" content="{{project.meta.ogImage}}">
-
 
   <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
 
@@ -372,26 +444,6 @@
     }
   </style>
 </head>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const backToTopBtn = document.getElementById("back-to-top");
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        backToTopBtn.classList.remove("hidden");
-        backToTopBtn.classList.add("opacity-100");
-      } else {
-        backToTopBtn.classList.add("hidden");
-        backToTopBtn.classList.remove("opacity-100");
-      }
-    });
-
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  });
-</script>
 
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
 
@@ -539,7 +591,6 @@
       // Start typing effect after page load
       window.addEventListener('load', typeWriterText1);
 
-
       // Cursor blink effect
       const cursor = document.querySelector('.cursor');
       setInterval(() => {
@@ -549,7 +600,6 @@
   </div>
 </element>
 <element id="09fe1771-e728-460d-871b-14ac9722494c" data-section-id="09fe1771-e728-460d-871b-14ac9722494c">
-
 
   <div id="root">
     <section id="about" class="bg-neutral-800 py-20">
@@ -617,7 +667,6 @@
   </div>
 </element>
 <element id="8e47cb49-fbf0-479e-922e-020305748c74" data-section-id="8e47cb49-fbf0-479e-922e-020305748c74">
-
 
   <div id="root">
     <section id="experience" class="bg-neutral-900 py-20">
@@ -708,7 +757,6 @@
   </div>
 </element>
 <element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
-
 
   <div id="root">
     <section id="education" class="bg-neutral-800 py-20">
@@ -810,7 +858,6 @@
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -820,7 +867,6 @@
   </div>
 </element>
 <element id="31f0a021-a106-402b-ab95-4c8ebe10f16d" data-section-id="31f0a021-a106-402b-ab95-4c8ebe10f16d">
-
 
   <div id="root">
     <section id="projects" class="bg-neutral-900 py-20">
@@ -856,7 +902,6 @@
                     class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
                 </div>
               </div>
-
 
               <!-- Popup Overlay -->
               <div class="popup-overlay" id="popup-overlay1" onclick="closePopup1()"></div>
@@ -906,7 +951,6 @@
                     class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+] Expand</button>
                 </div>
               </div>
-
 
               <!-- Popup Overlay -->
               <div class="popup-overlay" id="popup-overlay2" onclick="closePopup2()"></div>
@@ -963,7 +1007,6 @@
                 </div>
               </div>
 
-
               <!-- Popup Overlay -->
               <div class="popup-overlay" id="popup-overlay3" onclick="closePopup3()"></div>
 
@@ -1018,11 +1061,9 @@
                 </div>
               </div>
 
-
               <!-- Popup Overlay -->
               <div class="popup-overlay" id="popup-overlay4" onclick="closePopup4()"></div>
 
-              <!-- Popup Content -->
               <!-- Popup Content -->
               <div class="popup" id="popup4">
                 <div class="terminal-header flex items-center justify-between mb-6">
@@ -1052,7 +1093,6 @@
                   </div>
                 </div>
               </div>
-
             </div>
 
             <div class="mt-8 text-center">
@@ -1068,7 +1108,6 @@
   </div>
 </element>
 <element id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2" data-section-id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2">
-
 
   <div id="root">
     <section id="skills" class="bg-neutral-800 py-20">
@@ -1187,75 +1226,6 @@
         </div>
       </div>
     </section>
-
-    <script>
-
-      function openPopup1() {
-        document.getElementById("popup1").style.display = "block";
-        document.getElementById("popup-overlay1").style.display = "block";
-      }
-
-      function closePopup1() {
-        document.getElementById("popup1").style.display = "none";
-        document.getElementById("popup-overlay1").style.display = "none";
-      }
-
-      function openPopup2() {
-        document.getElementById("popup2").style.display = "block";
-        document.getElementById("popup-overlay2").style.display = "block";
-      }
-
-      function closePopup2() {
-        document.getElementById("popup2").style.display = "none";
-        document.getElementById("popup-overlay2").style.display = "none";
-      }
-
-      function openPopup3() {
-        document.getElementById("popup3").style.display = "block";
-        document.getElementById("popup-overlay3").style.display = "block";
-      }
-
-      function closePopup3() {
-        document.getElementById("popup3").style.display = "none";
-        document.getElementById("popup-overlay3").style.display = "none";
-      }
-
-      function openPopup4() {
-        document.getElementById("popup4").style.display = "block";
-        document.getElementById("popup-overlay4").style.display = "block";
-      }
-
-      function closePopup4() {
-        document.getElementById("popup4").style.display = "none";
-        document.getElementById("popup-overlay4").style.display = "none";
-      }
-
-      // Animate progress bars on scroll
-      const progressBars = document.querySelectorAll('.progress-bar');
-
-      const animateProgress = () => {
-        progressBars.forEach(bar => {
-          const progress = bar.getAttribute('data-progress');
-          bar.style.width = '0%';
-          setTimeout(() => {
-            bar.style.width = `${progress}%`;
-          }, 200);
-        });
-      }
-
-      // Trigger animation when section is in view
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateProgress();
-          }
-        });
-      });
-
-      document.querySelector('#skills').forEach(section => {
-        observer.observe(section);
-      });
-    </script>
   </div>
 </element>
 <element id="5bae4959-892f-40f8-81c2-2540d3ec6aba" data-section-id="5bae4959-892f-40f8-81c2-2540d3ec6aba">
@@ -1303,7 +1273,6 @@
                   </div>
                 </div>
               </div>
-
 
               <!-- Publication 2 -->
               <div
@@ -1531,10 +1500,6 @@
     </script>
   </div>
 </element>
-<div id="page_complete">
-  <script>
-    console.log('Page complete');
-  </script>
-  </body>
+</body>
 
-  </html>
+</html>
