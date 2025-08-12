@@ -8,32 +8,24 @@
     <meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="robots" content="{{project.meta.robotsMeta}}">
-
     <title>Rohan Joshi | $ ./deploy-career.sh</title>
     <!-- SEO Description -->
     <meta name="description"
         content="Portfolio of Rohan Joshi, showcasing my journey from education to various projects in DevOps, AI, and Software Development.">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
-
     <link href="{{fontLink}}" rel="stylesheet">
     <link href="{{secondaryFontLink}}" rel="stylesheet">
-
-
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
-
     <!-- Performance optimization: Preload critical resources -->
     <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
-
     <!-- Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <script type="application/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
@@ -171,14 +163,11 @@
                 },
             }
         });
-
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('nav a');
-
             window.addEventListener('scroll', () => {
                 let current = "";
-
                 sections.forEach(section => {
                     const sectionTop = section.offsetTop;
                     const sectionHeight = section.offsetHeight;
@@ -187,13 +176,11 @@
                         current = section.getAttribute('id');
                     }
                 });
-
                 // Handle last section (Contact)
                 const bottomOffset = document.documentElement.scrollHeight - window.innerHeight;
                 if (window.scrollY >= bottomOffset - 10) {
                     current = sections[sections.length - 1].getAttribute('id'); // Ensure last section is highlighted
                 }
-
                 navLinks.forEach(link => {
                     link.classList.remove('text-green-500');
                     if (link.getAttribute('href').includes(current)) {
@@ -202,10 +189,8 @@
                 });
             });
         });
-
         document.addEventListener("DOMContentLoaded", function () {
             const backToTopBtn = document.getElementById("back-to-top");
-
             window.addEventListener("scroll", () => {
                 if (window.scrollY > 300) {
                     backToTopBtn.classList.remove("hidden");
@@ -215,55 +200,52 @@
                     backToTopBtn.classList.remove("opacity-100");
                 }
             });
-
             backToTopBtn.addEventListener("click", () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             });
         });
-
         function openPopup1() {
             document.getElementById("popup1").style.display = "block";
             document.getElementById("popup-overlay1").style.display = "block";
+            document.body.style.overflow = 'hidden';  // Disable background scroll
         }
-
         function closePopup1() {
             document.getElementById("popup1").style.display = "none";
             document.getElementById("popup-overlay1").style.display = "none";
+            document.body.style.overflow = '';  // Enable scroll back
         }
-
         function openPopup2() {
             document.getElementById("popup2").style.display = "block";
             document.getElementById("popup-overlay2").style.display = "block";
+            document.body.style.overflow = 'hidden';  // Disable background scroll
         }
-
         function closePopup2() {
             document.getElementById("popup2").style.display = "none";
             document.getElementById("popup-overlay2").style.display = "none";
+            document.body.style.overflow = '';  // Enable scroll back
         }
-
         function openPopup3() {
             document.getElementById("popup3").style.display = "block";
             document.getElementById("popup-overlay3").style.display = "block";
+            document.body.style.overflow = 'hidden';  // Disable background scroll
         }
-
         function closePopup3() {
             document.getElementById("popup3").style.display = "none";
             document.getElementById("popup-overlay3").style.display = "none";
+            document.body.style.overflow = '';  // Enable scroll back
         }
-
         function openPopup4() {
             document.getElementById("popup4").style.display = "block";
             document.getElementById("popup-overlay4").style.display = "block";
+            document.body.style.overflow = 'hidden';  // Disable background scroll
         }
-
         function closePopup4() {
             document.getElementById("popup4").style.display = "none";
             document.getElementById("popup-overlay4").style.display = "none";
+            document.body.style.overflow = '';  // Enable scroll back
         }
-
         // Animate progress bars on scroll
         const progressBars = document.querySelectorAll('.progress-bar');
-
         const animateProgress = () => {
             progressBars.forEach(bar => {
                 const progress = bar.getAttribute('data-progress');
@@ -273,7 +255,6 @@
                 }, 200);
             });
         }
-
         // Trigger animation when section is in view
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -282,21 +263,17 @@
                 }
             });
         });
-
         document.querySelector('#skills').forEach(section => {
             observer.observe(section);
         });
     </script>
-
     <!-- Optimized Font Loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- Dynamic Meta Tags -->
     <meta name="description" content="{{project.meta.ogDescription}}">
     <meta name="keywords" content="{{project.meta.keywords}}">
@@ -315,9 +292,7 @@
     <meta name="twitter:title" content="{{project.meta.ogTitle}}">
     <meta name="twitter:description" content="{{project.meta.ogDescription}}">
     <meta name="twitter:image" content="{{project.meta.ogImage}}">
-
     <link rel="icon" type="image/x-icon" href="{{settings.favicon}}">
-
     <style>
         h1,
         h2,
@@ -444,7 +419,6 @@
                 align-self: flex-end;
             }
         }
-
 
         .terminal-btn {
             position: relative;
@@ -576,35 +550,94 @@
                 transform: translateX(-50%) translateY(0);
             }
         }
+
+        .playground-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .playground-overlay.active {
+            display: flex;
+        }
+
+        .playground-modal {
+            background: #111;
+            border: 1px solid #0f0;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 900px;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .playground-header {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background: #222;
+            border-bottom: 1px solid #0f0;
+        }
+
+        .terminal-btn {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin-right: 6px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .btn-red {
+            background: #FF5F56;
+        }
+
+        .btn-yellow {
+            background: #FFBD2E;
+        }
+
+        .btn-green {
+            background: #28C940;
+        }
+
+        .terminal-btn .icon {
+            display: none;
+        }
+
+        .terminal-btn:hover .icon {
+            display: block;
+        }
     </style>
 </head>
 
 <body class="antialiased text-gray-800 min-h-screen flex flex-col">
-
     <div id="tip-banner" class="tip-banner" style="display:none;">
         💡 Tip: Many elements here are interactive — try the red, yellow, and green buttons!
         <span id="countdown" style="margin-left:10px;">(5)</span>
         <button onclick="closeTip()">[X]</button>
     </div>
-
     <script>
         let countdownValue = 5;
         let countdownInterval;
-
         function closeTip() {
             clearInterval(countdownInterval);
             document.getElementById('tip-banner').style.display = 'none';
         }
-
         window.addEventListener('load', () => {
             const tipBanner = document.getElementById('tip-banner');
             const countdownElem = document.getElementById('countdown');
             tipBanner.style.display = 'flex';
-
             countdownInterval = setInterval(() => {
                 countdownValue--;
                 countdownElem.textContent = `(${countdownValue})`;
-
                 if (countdownValue <= 0) {
                     closeTip();
                 }
@@ -616,17 +649,14 @@
         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
         Skip to main content
     </a>
-
     <!-- Header -->
     <header class="relative z-50 bg-white dark:bg-gray-900">
         <!-- Header content goes here -->
     </header>
-
     <!-- Main content area -->
     <main id="main-content" class="flex-1 relative">
         <!-- Content will be injected here -->
     </main>
-
     <button id="back-to-top"
         class="fixed bottom-6 right-6 bg-green-500 text-black font-mono p-3 rounded-full shadow-md transition-opacity duration-300 hidden">
         ↑
@@ -634,7 +664,6 @@
 </body>
 
 </html>
-
 <element id="06645902-0e20-4298-ba47-fabda2ca0fe9" data-section-id="06645902-0e20-4298-ba47-fabda2ca0fe9">
     <div id="root">
         <nav class="fixed w-full z-50 bg-neutral-900 border-b border-neutral-800">
@@ -652,7 +681,6 @@
                             </span>
                         </a>
                     </div>
-
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
                             <a href="#hero"
@@ -704,8 +732,8 @@
                 </div>
             </div>
         </nav>
-
         <section id="hero" class="bg-neutral-900 min-h-[70vh] flex items-center pt-16">
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h1
@@ -725,16 +753,13 @@
                 </div>
             </div>
         </section>
-
         <script>
             // Mobile menu toggle
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-
             menuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-
             // Typing animation setup
             const initText = "> Initializing...";
             const baseText = "Hello World! I’m Rohan Joshi";
@@ -746,13 +771,10 @@
                 "Merge Conflicts Are Coming",
                 "Pipeline Reloaded"
             ];
-
             const typingText = document.querySelector('.typing-text');
-
             let charIndex = 0;
             let phraseIndex = 0;
             let isDeleting = false;
-
             // Step 1: Type Initializing...
             function typeInitializing() {
                 if (charIndex < initText.length) {
@@ -763,7 +785,6 @@
                     setTimeout(eraseInitializing, 1000);
                 }
             }
-
             // Step 2: Erase Initializing...
             function eraseInitializing() {
                 if (charIndex > 0) {
@@ -776,7 +797,6 @@
                     typeBaseText();
                 }
             }
-
             // Step 3: Type base line (Hello World...)
             function typeBaseText() {
                 if (charIndex < baseText.length) {
@@ -790,12 +810,10 @@
                     typePhrase();
                 }
             }
-
             // Step 4: Type & erase phrases on separate line
             function typePhrase() {
                 const phraseEl = document.querySelector('.phrase');
                 const currentPhrase = phrases[phraseIndex];
-
                 if (!isDeleting) {
                     phraseEl.textContent = currentPhrase.substring(0, charIndex + 1);
                     charIndex++;
@@ -808,32 +826,25 @@
                 } else {
                     phraseEl.textContent = currentPhrase.substring(0, charIndex - 1);
                     charIndex--;
-
                     if (charIndex === 0) {
                         isDeleting = false;
                         phraseIndex = (phraseIndex + 1) % phrases.length;
                     }
                 }
-
                 const speed = isDeleting ? 50 : 100;
                 setTimeout(typePhrase, speed);
             }
-
             // Start animation after load
             window.addEventListener('load', typeInitializing);
-
             // Cursor blink effect
             setInterval(() => {
                 const c = document.querySelector('.cursor');
                 if (c) c.style.opacity = c.style.opacity === '0' ? '1' : '0';
             }, 500);
         </script>
-
-
     </div>
 </element>
 <element id="09fe1771-e728-460d-871b-14ac9722494c" data-section-id="09fe1771-e728-460d-871b-14ac9722494c">
-
     <div id="root">
         <section id="about" class="bg-neutral-800 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -854,12 +865,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -874,7 +883,6 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
 
@@ -894,7 +902,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="about-toggle-yellow" data-tooltip="Collapse/Expand">
                             <span class="icon">
                                 <!-- Minus -->
@@ -903,7 +910,6 @@
                                 </svg>
                             </span>
                         </div>
-
                         <div class="terminal-btn btn-green" id="about-green" data-tooltip="Fullscreen Mode">
                             <span class="icon">
                                 <!-- Mac-style split triangle -->
@@ -926,10 +932,8 @@
                                 }
                             });
                         </script>
-
                         <span class="ml-4 text-gray-400 font-mono text-sm">about.sh</span>
                     </div>
-
                     <div class="terminal-content space-y-4">
                         <div class="animate__animated animate__fadeIn">
                             <span class="text-green-500 font-mono">$ whoami</span>
@@ -937,7 +941,6 @@
                                 Engineer and Tech
                                 Enthusiast</h2>
                         </div>
-
                         <div class="animate__animated animate__fadeIn animate__delay-1s">
                             <span class="text-green-500 font-mono">$ cat about.txt</span>
                             <div class="text-gray-300 font-mono mt-2 leading-relaxed">
@@ -959,7 +962,6 @@
                                 </p>
                             </div>
                         </div>
-
                         <div class="animate__animated animate__fadeIn animate__delay-2s mt-8">
                             <span class="text-green-500 font-mono">$ ./show-tech-stack.sh</span>
                             <div class="flex flex-wrap gap-3 mt-4">
@@ -977,7 +979,6 @@
                                     class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">OpenShift</span>
                             </div>
                         </div>
-
                         <div class="animate__animated animate__fadeIn animate__delay-3s mt-8">
                             <span class="text-green-500 font-mono">$ cat hobbies.txt</span>
                             <div class="text-gray-300 font-mono mt-2 leading-relaxed">
@@ -1000,7 +1001,6 @@
     </div>
 </element>
 <element id="8e47cb49-fbf0-479e-922e-020305748c74" data-section-id="8e47cb49-fbf0-479e-922e-020305748c74">
-
     <div id="root">
         <section id="experience" class="bg-neutral-900 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1021,12 +1021,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -1041,7 +1039,6 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
 
@@ -1061,7 +1058,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="exp-toggle-yellow" data-tooltip="Collapse/Expand">
                             <span class="icon">
                                 <!-- Minus -->
@@ -1095,7 +1091,6 @@
                             }
                         });
                     </script>
-
                     <div class="terminal-content space-y-8">
                         <div class="animate__animated animate__fadeIn">
                             <span class="text-green-500 font-mono">$ cat experience.log</span>
@@ -1119,7 +1114,6 @@
                                         <li>> Enhanced release processes by reducing manual interventions</li>
                                     </ul>
                                 </div>
-
                                 <!-- Experience 2 -->
                                 <div
                                     class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
@@ -1143,7 +1137,6 @@
                                             practices</li>
                                     </ul>
                                 </div>
-
                                 <!-- Experience 3 -->
                                 <div
                                     class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
@@ -1164,7 +1157,6 @@
                                             forecasting</li>
                                     </ul>
                                 </div>
-
                                 <!-- Experience 4 -->
                                 <div
                                     class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
@@ -1199,7 +1191,6 @@
     </div>
 </element>
 <element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
-
     <div id="root">
         <section id="education" class="bg-neutral-800 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1220,12 +1211,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -1240,10 +1229,8 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
-
                                     input.addEventListener('keydown', function (e) {
                                         if (e.key === 'Enter') {
                                             let val = this.value.trim().toLowerCase();
@@ -1260,7 +1247,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="edu-toggle-yellow" data-tooltip="Collapse/Expand">
                             <span class="icon">
                                 <!-- Minus -->
@@ -1269,7 +1255,6 @@
                                 </svg>
                             </span>
                         </div>
-
                         <div class="terminal-btn btn-green" id="education-green" data-tooltip="Fullscreen Mode">
                             <span class="icon">
                                 <!-- Mac-style split triangle -->
@@ -1294,11 +1279,9 @@
                             }
                         });
                     </script>
-
                     <div class="terminal-content">
                         <div class="animate__animated animate__fadeIn">
                             <span class="text-green-500 font-mono">$ ls -la /education/</span>
-
                             <div class="mt-6 space-y-6">
                                 <!-- Education 1 -->
                                 <div
@@ -1328,7 +1311,6 @@
                                         </li>
                                     </ul>
                                 </div>
-
                                 <!-- Education 2 -->
                                 <div
                                     class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
@@ -1351,43 +1333,70 @@
                                         </li>
                                     </ul>
                                 </div>
-
                                 <!-- Certifications -->
                                 <div class="mt-8">
-                                    <span class="text-green-500 font-mono">$ cat certifications.sh</span>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                    <span class="text-green-500 font-mono">$ cat digital_badge.sh</span>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
                                         <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
+                                            <a href="https://www.credly.com/badges/696ed22f-a2fb-445c-b4ee-ac527c6f3142"
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./Docs/engineering-excellence-academy-meraki.png"
+                                                    alt="Engineering Excellence Academy - Meraki"
+                                                    class="h-30 w-30 flex-shrink-0" />
+                                                Engineering Excellence Academy - Meraki
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
+                                            <a href="https://www.credly.com/badges/f1c95127-f5bd-4da6-83e8-8dcb762b3ee4"
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./Docs/devsecops-essentials.png" alt="DevSecOps Essentials"
+                                                    class="h-30 w-30 flex-shrink-0" />
+                                                DevSecOps Essentials
+                                            </a>
+                                        </div>
+                                        <div
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/beba2b57-c0d4-4a6d-bb07-90852b128b82"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./Docs/interskill-devops-fundamentals.png"
+                                                    alt="Interskill - DevOps Fundamentals"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Interskill - DevOps Fundamentals
                                             </a>
                                         </div>
                                         <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/582bfda0-aaa5-4c54-b7bd-061231a601f8"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./Docs/ibm-xlence-advocate.png" alt="IBM Xlence Advocate"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 IBM Xlence Advocate
                                             </a>
                                         </div>
                                         <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/0b0af313-45c0-4354-9e4f-046b17d2d638"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./Docs/cloud-essentials.png" alt="Cloud Essentials"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Cloud Essentials
                                             </a>
                                         </div>
                                         <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
-                                            <a href="https://courses.cognitiveclass.ai/certificates/66d8d04f653345b8a87abf5421860696"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
-                                                Introduction to Cloud
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20">
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/6ec8d6df-e222-43e0-9110-3871fadee0c5"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./Docs/enterprise-design-thinking-practitioner.png"
+                                                    alt="Enterprise Design Thinking Practitioner"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Enterprise Design Thinking Practitioner
                                             </a>
                                         </div>
@@ -1408,7 +1417,6 @@
     </div>
 </element>
 <element id="31f0a021-a106-402b-ab95-4c8ebe10f16d" data-section-id="31f0a021-a106-402b-ab95-4c8ebe10f16d">
-
     <div id="root">
         <section id="projects" class="bg-neutral-900 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1429,12 +1437,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -1449,10 +1455,8 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
-
                                     input.addEventListener('keydown', function (e) {
                                         if (e.key === 'Enter') {
                                             let val = this.value.trim().toLowerCase();
@@ -1469,7 +1473,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="projects-toggle-yellow" data-tooltip="Collapse/Expand">
                             <span class="icon">
                                 <!-- Minus -->
@@ -1478,7 +1481,6 @@
                                 </svg>
                             </span>
                         </div>
-
                         <div class="terminal-btn btn-green" id="projects-green" data-tooltip="Fullscreen Mode">
                             <span class="icon">
                                 <!-- Mac-style split triangle -->
@@ -1503,12 +1505,9 @@
                             }
                         });
                     </script>
-
                     <div class="terminal-content">
                         <span class="text-green-500 font-mono">$ ls -la /projects/</span>
-
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-
                             <!-- Project 1 -->
                             <div
                                 class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
@@ -1533,10 +1532,8 @@
                                         Expand</button>
                                 </div>
                             </div>
-
                             <!-- Popup Overlay -->
                             <div class="popup-overlay" id="popup-overlay1" onclick="closePopup1()"></div>
-
                             <!-- Popup Content -->
                             <div class="popup" id="popup1">
                                 <div class="terminal-header flex items-center justify-between mb-6">
@@ -1566,7 +1563,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                             <!-- Project 2 -->
                             <div
                                 class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
@@ -1594,10 +1590,8 @@
                                         Expand</button>
                                 </div>
                             </div>
-
                             <!-- Popup Overlay -->
                             <div class="popup-overlay" id="popup-overlay2" onclick="closePopup2()"></div>
-
                             <!-- Popup Content -->
                             <div class="popup" id="popup2">
                                 <div class="terminal-header flex items-center justify-between mb-6">
@@ -1633,7 +1627,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Project 3 -->
                             <div
                                 class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
@@ -1662,10 +1655,8 @@
                                         Expand</button>
                                 </div>
                             </div>
-
                             <!-- Popup Overlay -->
                             <div class="popup-overlay" id="popup-overlay3" onclick="closePopup3()"></div>
-
                             <!-- Popup Content -->
                             <div class="popup" id="popup3">
                                 <div class="terminal-header flex items-center justify-between mb-6">
@@ -1699,7 +1690,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Project 4 -->
                             <div
                                 class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
@@ -1727,10 +1717,8 @@
                                         Expand</button>
                                 </div>
                             </div>
-
                             <!-- Popup Overlay -->
                             <div class="popup-overlay" id="popup-overlay4" onclick="closePopup4()"></div>
-
                             <!-- Popup Content -->
                             <div class="popup" id="popup4">
                                 <div class="terminal-header flex items-center justify-between mb-6">
@@ -1767,7 +1755,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="mt-8 text-center">
                             <a href="https://github.com/Rohanjos97?tab=repositories" target="_blank"
                                 class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-200">
@@ -1787,7 +1774,6 @@
     </div>
 </element>
 <element id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2" data-section-id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2">
-
     <div id="root">
         <section id="skills" class="bg-neutral-800 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1808,12 +1794,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -1828,10 +1812,8 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
-
                                     input.addEventListener('keydown', function (e) {
                                         if (e.key === 'Enter') {
                                             let val = this.value.trim().toLowerCase();
@@ -1848,7 +1830,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="skills-toggle-yellow" data-tooltip="Collapse/Expand">
                             <span class="icon">
                                 <!-- Minus -->
@@ -1857,7 +1838,6 @@
                                 </svg>
                             </span>
                         </div>
-
                         <div class="terminal-btn btn-green" id="skills-green" data-tooltip="Fullscreen Mode">
                             <span class="icon">
                                 <!-- Mac-style split triangle -->
@@ -1872,7 +1852,6 @@
                     <script>
                         document.getElementById('skills-green').addEventListener('click', function () {
                             const terminalWindow = this.closest('.terminal-window');
-
                             if (!document.fullscreenElement) {
                                 terminalWindow.requestFullscreen().catch(err => {
                                     console.error(`Error attempting to enable fullscreen: ${err.message}`);
@@ -1882,10 +1861,8 @@
                             }
                         });
                     </script>
-
                     <div class="terminal-content">
                         <span class="text-green-500 font-mono">$ ./display-skills.sh</span>
-
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                             <!-- DevOps Skills -->
                             <div class="skill-category">
@@ -1902,7 +1879,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="skill-item">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-gray-300 font-mono">Kubernetes</span>
@@ -1914,7 +1890,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="skill-item">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-gray-300 font-mono">OCP</span>
@@ -1928,7 +1903,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Infrastructure Skills -->
                             <div class="skill-category">
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Infrastructure</h3>
@@ -1944,7 +1918,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="skill-item">
                                         <div class="flex justify-between mb-1">
                                             <span class="text-gray-300 font-mono">Ansible</span>
@@ -1959,7 +1932,6 @@
                                 </div>
 
                             </div>
-
                             <!-- Programming Skills -->
                             <div class="skill-category mt-8">
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Programming</h3>
@@ -1974,7 +1946,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Tools -->
                             <div class="skill-category mt-8">
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Tools & Platforms</h3>
@@ -2003,7 +1974,6 @@
     </div>
 </element>
 <element id="5bae4959-892f-40f8-81c2-2540d3ec6aba" data-section-id="5bae4959-892f-40f8-81c2-2540d3ec6aba">
-
     <div id="root">
         <section id="publications" class="bg-neutral-900 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2024,12 +1994,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -2044,10 +2012,8 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
-
                                     input.addEventListener('keydown', function (e) {
                                         if (e.key === 'Enter') {
                                             let val = this.value.trim().toLowerCase();
@@ -2064,7 +2030,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="publications-toggle-yellow"
                             data-tooltip="Collapse/Expand">
                             <span class="icon">
@@ -2074,7 +2039,6 @@
                                 </svg>
                             </span>
                         </div>
-
                         <div class="terminal-btn btn-green" id="publications-green" data-tooltip="Fullscreen Mode">
                             <span class="icon">
                                 <!-- Mac-style split triangle -->
@@ -2099,10 +2063,8 @@
                             }
                         });
                     </script>
-
                     <div class="terminal-content">
                         <span class="text-green-500 font-mono">$ cat research_publications.md</span>
-
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                             <!-- Publication 1 -->
                             <div
@@ -2139,7 +2101,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Publication 2 -->
                             <div
                                 class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
@@ -2149,7 +2110,9 @@
                                         Use of Auto-Inpainting</h3>
                                     <span class="text-gray-500 font-mono text-sm">2024</span>
                                 </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4">Journal: SN Computer Science</p>
+                                <p class="text-gray-400 font-mono text-sm mb-4">Journal: SN Computer Science Volume 6,
+                                    article number 17, (2025)
+                                </p>
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
@@ -2175,14 +2138,14 @@
                                     <div
                                         class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
                                         <span class="font-bold text-green-400">Citation:</span>
-                                        Author(s). "Sharma, S., Joshi, R., Bhilare, S. et al. Robust Adversarial
+                                        Author(s). "Sharma, S., <span class="font-bold text-green-500">Joshi, R.</span>,
+                                        Bhilare, S. et al. Robust Adversarial
                                         Defense: An Analysis on Use
                                         of Auto-Inpainting. SN COMPUT. SCI. 6, 17 (2025).
                                         https://doi.org/10.1007/s42979-024-03542-5"
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Publication 3 -->
                             <div
                                 class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
@@ -2220,7 +2183,8 @@
                                     <div
                                         class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
                                         <span class="font-bold text-green-400">Citation:</span>
-                                        Author(s). "Sharma, S., Joshi, R., Bhilare, S., Joshi, M.V. (2023). Robust
+                                        Author(s). "Sharma, S., <span class="font-bold text-green-500">Joshi, R.</span>,
+                                        Bhilare, S., Joshi, M.V. (2023). Robust
                                         Adversarial Defence: Use
                                         of Auto-inpainting. In: Tsapatsoulis, N., et al. Computer Analysis of Images and
                                         Patterns. CAIP
@@ -2243,7 +2207,6 @@
     </div>
 </element>
 <element id="905aecfa-d814-48a5-8219-26f90e0c44bc" data-section-id="905aecfa-d814-48a5-8219-26f90e0c44bc">
-
     <div id="root">
         <section id="contact" class="bg-neutral-800 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2264,12 +2227,10 @@
                                 redBtn.addEventListener('click', function () {
                                     const terminal = this.closest('.terminal-window');
                                     const content = terminal.querySelector('.terminal-content');
-
                                     // Save original content if not already saved
                                     if (!content.dataset.originalHtml) {
                                         content.dataset.originalHtml = content.innerHTML;
                                     }
-
                                     // Replace with exit message + input
                                     content.innerHTML = `
                                         <div class="text-green-500 font-mono">$ exit</div>
@@ -2284,10 +2245,8 @@
                                         </div>
                                         <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
                                     `;
-
                                     const input = content.querySelector('.fake-terminal-input');
                                     const errorMsg = content.querySelector('.command-error');
-
                                     input.addEventListener('keydown', function (e) {
                                         if (e.key === 'Enter') {
                                             let val = this.value.trim().toLowerCase();
@@ -2304,7 +2263,6 @@
                                 });
                             });
                         </script>
-
                         <div class="terminal-btn btn-yellow" id="contact-toggle-yellow" data-tooltip="Collapse/Expand">
                             <span class="icon">
                                 <!-- Minus -->
@@ -2313,7 +2271,6 @@
                                 </svg>
                             </span>
                         </div>
-
                         <div class="terminal-btn btn-green" id="contact-green" data-tooltip="Fullscreen Mode">
                             <span class="icon">
                                 <!-- Mac-style split triangle -->
@@ -2338,7 +2295,6 @@
                             }
                         });
                     </script>
-
                     <div class="terminal-content">
                         <div
                             class="contact-info flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
@@ -2356,7 +2312,6 @@
                                     </p>
                                 </div>
                             </div>
-
                             <!-- Social Links -->
                             <div class="flex-1">
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Social Links</h3>
@@ -2371,7 +2326,6 @@
                                     </a>
                                 </div>
                             </div>
-
                             <!-- Resume -->
                             <div class="flex-1">
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Resume</h3>
@@ -2397,7 +2351,6 @@
     </div>
 </element>
 <element id="01219cd0-f928-4be0-981d-069972e95a99" data-section-id="01219cd0-f928-4be0-981d-069972e95a99">
-
     <div id="root">
         <footer id="footer" class="bg-neutral-900 border-t border-green-500/30">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -2407,7 +2360,6 @@
                         <p class="text-gray-400 font-mono">DevOps Engineer</p>
                         <p class="text-gray-400 font-mono">Tech Enthusiast</p>
                     </div>
-
                     <div class="terminal-nav">
                         <span class="text-green-500 font-mono text-lg mb-4 block">$ ls navigation/</span>
                         <ul class="space-y-2">
@@ -2443,7 +2395,6 @@
                             </li>
                         </ul>
                     </div>
-
                     <div class="terminal-social">
                         <span class="text-green-500 font-mono text-lg mb-4 block">$ ls social/</span>
                         <div class="space-y-2">
@@ -2455,14 +2406,12 @@
                                 GitHub</a>
                         </div>
                     </div>
-
                     <div class="terminal-contact">
                         <span class="text-green-500 font-mono text-lg mb-4 block">$ cat contact.sh</span>
                         <p class="text-gray-400 font-mono mb-2">Rohanjos97@gmail.com</p>
                         <p class="text-gray-400 font-mono">Gujarat, India</p>
                     </div>
                 </div>
-
                 <div class="flex flex-col items-center mt-6">
                     <p class="text-gray-400 font-mono text-sm">
                         Built with ❤️ by
@@ -2472,38 +2421,19 @@
                         </a>
                     </p>
                 </div>
-
-
                 <div class="terminal-status mt-8 pt-8 border-t border-green-500/30">
                     <div class="flex items-center justify-between">
                         <p class="text-gray-500 font-mono text-sm">
                             <span class="text-green-500">$</span> Status: System Operational
                         </p>
                         <p class="text-gray-500 font-mono text-sm">
-                            <span class="text-green-500">$</span> Last Updated: <span id="current-time"></span>
+                            <span class="text-green-500">$</span> © 2025 All rights reserved
                         </p>
                     </div>
-                    <p class="text-gray-500 font-mono text-sm mt-4">
-                        <span class="text-green-500">$</span> © 2024 All rights reserved
-                    </p>
                 </div>
             </div>
         </footer>
-
-        <script>
-            // Update current time
-            function updateTime() {
-                const timeElement = document.getElementById('current-time');
-                const now = new Date();
-                timeElement.textContent = now.toLocaleString();
-            }
-
-            // Update time initially and every second
-            updateTime();
-            setInterval(updateTime, 1000);
-        </script>
     </div>
-
 </element>
 </body>
 
