@@ -615,62 +615,6 @@
         .terminal-btn:hover .icon {
             display: block;
         }
-
-        .playground-content {
-            flex: 1;
-            padding: 10px;
-            color: #0f0;
-            font-family: monospace;
-            font-size: 14px;
-            overflow-y: auto;
-            white-space: pre-wrap;
-            transition: max-height 0.3s ease;
-        }
-
-        .playground-content.collapsed {
-            max-height: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-
-        .playground-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: black;
-            color: #0f0;
-            border: 1px solid #0f0;
-            padding: 8px 12px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: monospace;
-            z-index: 10000;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .playground-toggle:hover,
-        .playground-toggle.active {
-            background: #0f0;
-            color: black;
-        }
-
-        .blink {
-            animation: blinkAnim 1s infinite;
-        }
-
-        @keyframes blinkAnim {
-
-            0%,
-            50%,
-            100% {
-                opacity: 1;
-            }
-
-            25%,
-            75% {
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 
@@ -789,123 +733,7 @@
             </div>
         </nav>
         <section id="hero" class="bg-neutral-900 min-h-[70vh] flex items-center pt-16">
-            <!-- Playground toggle button -->
-            <button class="playground-toggle" id="playgroundBtn">▶ Playground</button>
-            <!-- Playground Modal -->
-            <div class="playground-overlay" id="playgroundOverlay">
-                <div class="playground-modal" id="playgroundModal">
-                    <!-- Header with Mac-style buttons -->
-                    <div class="playground-header">
-                        <div class="terminal-btn btn-red" id="closePlayground">
-                            <span class="icon">
-                                <svg viewBox="0 0 8 8">
-                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
-                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="terminal-btn btn-yellow" id="collapsePlayground">
-                            <span class="icon">
-                                <svg viewBox="0 0 8 8">
-                                    <line x1="1" y1="4" x2="7" y2="4" stroke="black" stroke-width="1.5" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="terminal-btn btn-green" id="fullscreenPlayground">
-                            <span class="icon">
-                                <svg viewBox="0 0 10 10" fill="black">
-                                    <polygon points="2,2 2,6 6,2" />
-                                    <polygon points="8,8 4,8 8,4" />
-                                </svg>
-                            </span>
-                        </div>
-                        <span class="ml-4 text-gray-400 font-mono text-sm">$ playground_mode</span>
-                    </div>
-                    <!-- Modal content -->
-                    <div class="playground-content" id="playgroundContent"></div>
-                </div>
-            </div>
-            <script>
-                const playgroundBtn = document.getElementById("playgroundBtn");
-                const playgroundOverlay = document.getElementById("playgroundOverlay");
-                const playgroundModal = document.getElementById("playgroundModal");
-                const closePlayground = document.getElementById("closePlayground");
-                const collapsePlayground = document.getElementById("collapsePlayground");
-                const fullscreenPlayground = document.getElementById("fullscreenPlayground");
-                const playgroundContent = document.getElementById("playgroundContent");
-                function openPlayground() {
-                    playgroundOverlay.classList.add("active");
-                    playgroundBtn.classList.add("active");
-                    document.body.style.overflow = "hidden";
-                    runPipelineSimulation();
-                }
-                function closePlaygroundModal() {
-                    playgroundOverlay.classList.remove("active");
-                    playgroundBtn.classList.remove("active");
-                    document.body.style.overflow = "";
-                    playgroundContent.innerHTML = "";
-                }
-                playgroundBtn.addEventListener("click", openPlayground);
-                closePlayground.addEventListener("click", closePlaygroundModal);
-                collapsePlayground.addEventListener("click", () => {
-                    playgroundContent.classList.toggle("collapsed");
-                });
-                fullscreenPlayground.addEventListener("click", () => {
-                    if (!document.fullscreenElement) {
-                        playgroundModal.requestFullscreen().catch(err => console.error(err));
-                    } else {
-                        document.exitFullscreen();
-                    }
-                });
-                function runPipelineSimulation() {
-                    const lines = [
-                        "[INFO] Pipeline started...",
-                        "[INFO] Checking repository...",
-                        "[SUCCESS] Repository cloned successfully.",
-                        "[INFO] Installing dependencies...",
-                        "[SUCCESS] Dependencies installed.",
-                        "[INFO] Running unit tests...",
-                        "[SUCCESS] All tests passed (10 tests in 0.78s).",
-                        "[INFO] Building Docker image...",
-                        "[SUCCESS] Docker image built: Portfolio:latest",
-                        "[INFO] Pushing Docker image to registry...",
-                        "[SUCCESS] Image pushed successfully.",
-                        "[INFO] Deploying to Kubernetes...",
-                        "[SUCCESS] Deployment completed.",
-                        "[DONE] Pipeline finished without errors."
-                    ];
-                    playgroundContent.innerHTML = "";
-                    let i = 0;
-                    const interval = setInterval(() => {
-                        playgroundContent.innerHTML += lines[i] + "\n";
-                        playgroundContent.scrollTop = playgroundContent.scrollHeight;
-                        i++;
-                        if (i >= lines.length) {
-                            clearInterval(interval);
-                            setTimeout(() => {
-                                playgroundContent.innerHTML += "\n";
-                                const pressMsg = document.createElement("span");
-                                pressMsg.textContent = "Press any key to continue";
-                                pressMsg.classList.add("blink");
-                                playgroundContent.appendChild(pressMsg);
-                                document.addEventListener("keydown", showHomeScreen, { once: true });
-                            }, 1000);
-                        }
-                    }, 100);
-                }
-                function showHomeScreen() {
-                    playgroundContent.innerHTML = `
-        <h2 style="color:#0f0;">Welcome to the Playground</h2>
-        <p>Here you can try out interactive DevOps demos:</p>
-        <ul>
-            <li>Log Stream Mode — Live container logs simulation</li>
-            <li>Pipeline Simulator — Step through CI/CD processes</li>
-            <li>Experiment with CLI commands</li>
-        </ul>
-        <p style="margin-top:10px; color:#888;">(Add your interactive features here!)</p>
-    `;
-                }
-            </script>
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
                     <h1
@@ -1508,60 +1336,69 @@
                                 <!-- Certifications -->
                                 <div class="mt-8">
                                     <span class="text-green-500 font-mono">$ cat digital_badge.sh</span>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/f1c95127-f5bd-4da6-83e8-8dcb762b3ee4"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
-                                                DevSecOps Essentials
-                                            </a>
-                                            <span class="text-gray-400 font-mono text-sm mt-2 self-end">Issued: July
-                                                2025</span>
-                                        </div>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
                                         <div
                                             class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/696ed22f-a2fb-445c-b4ee-ac527c6f3142"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./engineering-excellence-academy-meraki.png"
+                                                    alt="Engineering Excellence Academy - Meraki"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Engineering Excellence Academy - Meraki
                                             </a>
-                                            <span class="text-gray-400 font-mono text-sm mt-2 self-end">Issued: July
-                                                2025</span>
+                                        </div>
+                                        <div
+                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
+                                            <a href="https://www.credly.com/badges/f1c95127-f5bd-4da6-83e8-8dcb762b3ee4"
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="./devsecops-essentials.png" alt="DevSecOps Essentials"
+                                                    class="h-30 w-30 flex-shrink-0" />
+                                                DevSecOps Essentials
+                                            </a>
                                         </div>
                                         <div
                                             class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/beba2b57-c0d4-4a6d-bb07-90852b128b82"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="interskill-devops-fundamentals.png"
+                                                    alt="Interskill - DevOps Fundamentals"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Interskill - DevOps Fundamentals
                                             </a>
-                                            <span class="text-gray-400 font-mono text-sm mt-2 self-end">Issued: August
-                                                2024</span>
                                         </div>
                                         <div
                                             class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/582bfda0-aaa5-4c54-b7bd-061231a601f8"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="ibm-xlence-advocate.png" alt="IBM Xlence Advocate"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 IBM Xlence Advocate
                                             </a>
-                                            <span class="text-gray-400 font-mono text-sm mt-2 self-end">Issued: July
-                                                2024</span>
                                         </div>
                                         <div
                                             class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/0b0af313-45c0-4354-9e4f-046b17d2d638"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="cloud-essentials.png" alt="Cloud Essentials"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Cloud Essentials
                                             </a>
-                                            <span class="text-gray-400 font-mono text-sm mt-2 self-end">Issued: May
-                                                2024</span>
                                         </div>
                                         <div
                                             class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
                                             <a href="https://www.credly.com/badges/6ec8d6df-e222-43e0-9110-3871fadee0c5"
-                                                target="_blank" class="text-gray-300 font-mono hover:text-green-400">
+                                                target="_blank"
+                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
+                                                <img src="enterprise-design-thinking-practitioner.png"
+                                                    alt="Enterprise Design Thinking Practitioner"
+                                                    class="h-30 w-30 flex-shrink-0" />
                                                 Enterprise Design Thinking Practitioner
                                             </a>
-                                            <span class="text-gray-400 font-mono text-sm mt-2 self-end">Issued: January
-                                                2024</span>
                                         </div>
                                     </div>
                                 </div>
