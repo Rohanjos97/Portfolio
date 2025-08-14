@@ -615,6 +615,10 @@
         .terminal-btn:hover .icon {
             display: block;
         }
+
+        .phrase-small {
+            font-size: 0.8em;
+        }
     </style>
 </head>
 
@@ -808,7 +812,7 @@
                 } else {
                     charIndex = 0;
                     // After base line is done, add second line for phrases
-                    typingText.innerHTML = baseText + "<br><span class='phrase'></span><span class='cursor'>|</span>";
+                    typingText.innerHTML = baseText + "<br><span class='phrase phrase-small'></span><span class='cursor'>|</span>";
                     typePhrase();
                 }
             }
