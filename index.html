@@ -615,6 +615,10 @@
         .terminal-btn:hover .icon {
             display: block;
         }
+
+        .phrase-small {
+            font-size: 0.8em;
+        }
     </style>
 </head>
 
@@ -687,14 +691,16 @@
                                 class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Home</a>
                             <a href="#about"
                                 class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">About</a>
+                            <a href="#skills"
+                                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Skills</a>
                             <a href="#experience"
                                 class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Experience</a>
                             <a href="#education"
                                 class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Education</a>
                             <a href="#projects"
                                 class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Projects</a>
-                            <a href="#skills"
-                                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Skills</a>
+                            <a href="#certificates"
+                                class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Certificates</a>
                             <a href="#publications"
                                 class="text-gray-300 hover:text-green-500 px-3 py-2 rounded-md text-sm font-medium font-mono transition-colors duration-200">Publications</a>
                             <a href="#contact"
@@ -717,14 +723,16 @@
                         class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Home</a>
                     <a href="#about"
                         class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">About</a>
+                    <a href="#skills"
+                        class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Skills</a>
                     <a href="#experience"
                         class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Experience</a>
                     <a href="#education"
                         class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Education</a>
                     <a href="#projects"
                         class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Projects</a>
-                    <a href="#skills"
-                        class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Skills</a>
+                    <a href="#certificates"
+                        class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Certificates</a>
                     <a href="#publications"
                         class="text-gray-300 hover:text-green-500 block px-3 py-2 rounded-md text-base font-medium font-mono">Publications</a>
                     <a href="#contact"
@@ -766,7 +774,7 @@
             const phrases = [
                 "Push. Build. Deploy. Repeat.",
                 "May the Containers Be With You",
-                "Image Pulled. Spirits Lifted.",
+                "Deploy Complete. Spirits Lifted.",
                 "Keep Calm and Roll Back",
                 "Merge Conflicts Are Coming",
                 "Pipeline Reloaded"
@@ -806,7 +814,7 @@
                 } else {
                     charIndex = 0;
                     // After base line is done, add second line for phrases
-                    typingText.innerHTML = baseText + "<br><span class='phrase'></span><span class='cursor'>|</span>";
+                    typingText.innerHTML = baseText + "<br><span class='phrase phrase-small'></span><span class='cursor'>|</span>";
                     typePhrase();
                 }
             }
@@ -945,39 +953,22 @@
                             <span class="text-green-500 font-mono">$ cat about.txt</span>
                             <div class="text-gray-300 font-mono mt-2 leading-relaxed">
                                 <p class="mb-4">
-                                    > Versatile and results-driven professional with over 3 years of experience,
-                                    excelling in dynamic and
-                                    fast-paced environments
+                                    > Versatile, results-driven DevOps Engineer with 3+ years’ experience in fast-paced,
+                                    dynamic environments
                                 </p>
                                 <p class="mb-4">
                                     > Passionate about automating infrastructure and optimizing deployment pipelines
                                 </p>
                                 <p class="mb-4">
-                                    > Specialized in containerization, CI/CD implementation, and cloud-native
-                                    architecture
+                                    > Skilled in containerization, CI/CD, and cloud-native architecture
                                 </p>
                                 <p>
-                                    > Currently focused on implementing scalable solutions and advancing cloud
-                                    infrastructure automation
+                                    > Focused on implementing scalable solutions and advancing cloud infrastructure
+                                    automation
                                 </p>
                             </div>
                         </div>
                         <div class="animate__animated animate__fadeIn animate__delay-2s mt-8">
-                            <span class="text-green-500 font-mono">$ ./show-tech-stack.sh</span>
-                            <div class="flex flex-wrap gap-3 mt-4">
-                                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Python
-                                    Scripting</span>
-                                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Shell
-                                    Scripting</span>
-                                <span class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Python
-                                    Programming</span>
-                                <span
-                                    class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Docker</span>
-                                <span
-                                    class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">Kubernetes</span>
-                                <span
-                                    class="px-3 py-1 bg-neutral-700 text-green-400 rounded font-mono text-sm">OpenShift</span>
-                            </div>
                         </div>
                         <div class="animate__animated animate__fadeIn animate__delay-3s mt-8">
                             <span class="text-green-500 font-mono">$ cat hobbies.txt</span>
@@ -1000,795 +991,11 @@
         </section>
     </div>
 </element>
-<element id="8e47cb49-fbf0-479e-922e-020305748c74" data-section-id="8e47cb49-fbf0-479e-922e-020305748c74">
-    <div id="root">
-        <section id="experience" class="bg-neutral-900 py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
-                    id="work-e-terminal-window">
-                    <div class="terminal-header flex items-center mb-6">
-                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
-                            <span class="icon">
-                                <!-- Cross -->
-                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
-                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
-                                </svg>
-                            </span>
-                        </div>
-                        <script>
-                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
-                                redBtn.addEventListener('click', function () {
-                                    const terminal = this.closest('.terminal-window');
-                                    const content = terminal.querySelector('.terminal-content');
-                                    // Save original content if not already saved
-                                    if (!content.dataset.originalHtml) {
-                                        content.dataset.originalHtml = content.innerHTML;
-                                    }
-                                    // Replace with exit message + input
-                                    content.innerHTML = `
-                                        <div class="text-green-500 font-mono">$ exit</div>
-                                        <div class="text-gray-300 font-mono mb-2">
-                                            Session closed. To resume, type "continue".
-                                        </div>
-                                        <div class="flex items-center font-mono text-green-500">
-                                            <span>$</span>
-                                            <input type="text" 
-                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
-                                                autofocus />
-                                        </div>
-                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
-                                    `;
-                                    const input = content.querySelector('.fake-terminal-input');
-                                    const errorMsg = content.querySelector('.command-error');
-
-                                    input.addEventListener('keydown', function (e) {
-                                        if (e.key === 'Enter') {
-                                            let val = this.value.trim().toLowerCase();
-
-                                            if (val === 'continue') {
-                                                content.innerHTML = content.dataset.originalHtml; // Restore original
-                                            } else {
-                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
-                                                errorMsg.style.display = 'block';
-                                                this.value = ''; // Clear input for retry
-                                            }
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
-                        <div class="terminal-btn btn-yellow" id="exp-toggle-yellow" data-tooltip="Collapse/Expand">
-                            <span class="icon">
-                                <!-- Minus -->
-                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
-                                </svg>
-                            </span>
-                        </div>
-
-                        <div class="terminal-btn btn-green" id="work-experience-green" data-tooltip="Fullscreen Mode">
-                            <span class="icon">
-                                <!-- Mac-style split triangle -->
-                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="2,2 2,6 6,2" />
-                                    <polygon points="8,8 4,8 8,4" />
-                                </svg>
-                            </span>
-                        </div>
-                        <span class="ml-4 text-gray-400 font-mono text-sm">work_experience.sh</span>
-                    </div>
-                    <script>
-                        document.getElementById('work-experience-green').addEventListener('click', function () {
-                            const terminalWindow = this.closest('.terminal-window');
-
-                            if (!document.fullscreenElement) {
-                                terminalWindow.requestFullscreen().catch(err => {
-                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
-                                });
-                            } else {
-                                document.exitFullscreen();
-                            }
-                        });
-                    </script>
-                    <div class="terminal-content space-y-8">
-                        <div class="animate__animated animate__fadeIn">
-                            <span class="text-green-500 font-mono">$ cat experience.log</span>
-
-                            <div class="mt-6 space-y-8">
-                                <!-- Experience 1 -->
-                                <div
-                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
-                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                        <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Engineer</h3>
-                                        <span class="text-gray-400 font-mono text-sm">July, 2024 - Present</span>
-                                    </div>
-                                    <h4 class="text-gray-300 font-mono mb-2">IBM India Software Lab, Gandhinagar, India
-                                    </h4>
-                                    <ul class="text-gray-400 font-mono space-y-2">
-                                        <li>> Automate deployment pipelines using Python/Shell scripting</li>
-                                        <li>> MManage Kubernetes and OpenShift (OCP) deployments for seamless rollouts
-                                        </li>
-                                        <li>> Optimize CI/CD workflows with Travis CI</li>
-                                        <li>> Working closely with dev and ops teams to streamline deployments</li>
-                                        <li>> Enhanced release processes by reducing manual interventions</li>
-                                    </ul>
-                                </div>
-                                <!-- Experience 2 -->
-                                <div
-                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
-                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                        <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Intern</h3>
-                                        <span class="text-gray-400 font-mono text-sm">Jan, 2024 - July, 2024</span>
-                                    </div>
-                                    <h4 class="text-gray-300 font-mono mb-2">IBM India Software Lab, Gandhinagar, India
-                                    </h4>
-                                    <ul class="text-gray-400 font-mono space-y-2">
-                                        <li>> Gained hands-on experience with CI/CD processes, learning to automate
-                                            deployments</li>
-                                        <li>> Developed Shell and Python scripts for basic automation tasks and system
-                                            monitoring</li>
-                                        <li>> Explored Kubernetes and OpenShift, assisting in deployment and
-                                            troubleshooting</li>
-                                        <li>> Worked with Travis CI, setting up simple pipelines and understanding build
-                                            workflows</li>
-                                        <li>> Reduced deployment time by 70% through CI/CD pipeline optimization</li>
-                                        <li>> Collaborated with senior engineers, gaining insights into DevOps best
-                                            practices</li>
-                                    </ul>
-                                </div>
-                                <!-- Experience 3 -->
-                                <div
-                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
-                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                        <h3 class="text-xl font-bold text-green-400 font-mono">Machine Learning Intern
-                                        </h3>
-                                        <span class="text-gray-400 font-mono text-sm">May, 2023 - July, 2023</span>
-                                    </div>
-                                    <h4 class="text-gray-300 font-mono mb-2">Clomotech, Gandhinagar, India</h4>
-                                    <ul class="text-gray-400 font-mono space-y-2">
-                                        <li>> Developed an ML-based solution to predict SPY (S&P 500 ETF) using a
-                                            5-minute timeframe dataset
-                                        </li>
-                                        <li>> Utilized hybrid time-series models, AutoML, and classification techniques
-                                            to improve accuracy
-                                            and performance</li>
-                                        <li>> Optimized predictive models for enhanced reliability in financial market
-                                            forecasting</li>
-                                    </ul>
-                                </div>
-                                <!-- Experience 4 -->
-                                <div
-                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
-                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                        <h3 class="text-xl font-bold text-green-400 font-mono">Software Engineer</h3>
-                                        <span class="text-gray-400 font-mono text-sm">Jan, 2019 - Jan, 2021</span>
-                                    </div>
-                                    <h4 class="text-gray-300 font-mono mb-2">Oracle Cerner, Bangalore, India</h4>
-                                    <ul class="text-gray-400 font-mono space-y-2">
-                                        <li>> Assumed primary responsibility for front-end development</li>
-                                        <li>> Established best practices to ensure code quality and team-wide
-                                            maintainability</li>
-                                        <li>> Leading feature implementation and bug resolution to ensure seamless
-                                            functionality</li>
-                                        <li>> Supported new team members in application onboarding and resolving
-                                            technical roadblocks</li>
-                                        <li>> Built fast and responsive websites using React and JavaScript</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('exp-toggle-yellow').addEventListener('click', function () {
-                        const content = this.closest('#work-e-terminal-window').querySelector('.terminal-content');
-                        content.classList.toggle('collapsed');
-                    });
-                </script>
-            </div>
-        </section>
-    </div>
-</element>
-<element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
-    <div id="root">
-        <section id="education" class="bg-neutral-800 py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
-                    id="edu-terminal-window">
-                    <div class="terminal-header flex items-center mb-6">
-                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
-                            <span class="icon">
-                                <!-- Cross -->
-                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
-                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
-                                </svg>
-                            </span>
-                        </div>
-                        <script>
-                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
-                                redBtn.addEventListener('click', function () {
-                                    const terminal = this.closest('.terminal-window');
-                                    const content = terminal.querySelector('.terminal-content');
-                                    // Save original content if not already saved
-                                    if (!content.dataset.originalHtml) {
-                                        content.dataset.originalHtml = content.innerHTML;
-                                    }
-                                    // Replace with exit message + input
-                                    content.innerHTML = `
-                                        <div class="text-green-500 font-mono">$ exit</div>
-                                        <div class="text-gray-300 font-mono mb-2">
-                                            Session closed. To resume, type "continue".
-                                        </div>
-                                        <div class="flex items-center font-mono text-green-500">
-                                            <span>$</span>
-                                            <input type="text" 
-                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
-                                                autofocus />
-                                        </div>
-                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
-                                    `;
-                                    const input = content.querySelector('.fake-terminal-input');
-                                    const errorMsg = content.querySelector('.command-error');
-                                    input.addEventListener('keydown', function (e) {
-                                        if (e.key === 'Enter') {
-                                            let val = this.value.trim().toLowerCase();
-
-                                            if (val === 'continue') {
-                                                content.innerHTML = content.dataset.originalHtml; // Restore original
-                                            } else {
-                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
-                                                errorMsg.style.display = 'block';
-                                                this.value = ''; // Clear input for retry
-                                            }
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
-                        <div class="terminal-btn btn-yellow" id="edu-toggle-yellow" data-tooltip="Collapse/Expand">
-                            <span class="icon">
-                                <!-- Minus -->
-                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="terminal-btn btn-green" id="education-green" data-tooltip="Fullscreen Mode">
-                            <span class="icon">
-                                <!-- Mac-style split triangle -->
-                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="2,2 2,6 6,2" />
-                                    <polygon points="8,8 4,8 8,4" />
-                                </svg>
-                            </span>
-                        </div>
-                        <span class="ml-4 text-gray-400 font-mono text-sm">education.sh</span>
-                    </div>
-                    <script>
-                        document.getElementById('education-green').addEventListener('click', function () {
-                            const terminalWindow = this.closest('.terminal-window');
-
-                            if (!document.fullscreenElement) {
-                                terminalWindow.requestFullscreen().catch(err => {
-                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
-                                });
-                            } else {
-                                document.exitFullscreen();
-                            }
-                        });
-                    </script>
-                    <div class="terminal-content">
-                        <div class="animate__animated animate__fadeIn">
-                            <span class="text-green-500 font-mono">$ ls -la /education/</span>
-                            <div class="mt-6 space-y-6">
-                                <!-- Education 1 -->
-                                <div
-                                    class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
-                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                        <h3 class="text-xl font-bold text-green-400 font-mono"> M.Tech in Information
-                                            and Communication
-                                            Technology (ICT)</h3>
-                                        <span class="text-gray-400 font-mono text-sm">2022 - 2024</span>
-                                    </div>
-                                    <h4 class="text-gray-300 font-mono mb-2">> Dhirubhai Ambani University</h4>
-                                    <h4 class="text-gray-300 font-mono mb-2"> &nbsp; formerly known as Dhirubhai Ambani
-                                        Institute of
-                                        Information and Communication Technology</h4>
-                                    <ul class="text-gray-400 font-mono space-y-2 mt-4">
-                                        <li class="flex items-center">
-                                            <span class="text-green-500 mr-2">$</span>
-                                            Specialization in Machine Learning (ML)
-                                        </li>
-                                        <li class="flex items-center">
-                                            <span class="text-green-500 mr-2">$</span>
-                                            CGPA: 9.18/10.0
-                                        </li>
-                                        <li class="flex items-center">
-                                            <span class="text-green-500 mr-2">$</span>
-                                            Research Focus: Adversarial Machine Learning, Computer Vision
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Education 2 -->
-                                <div
-                                    class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/20">
-                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                                        <h3 class="text-xl font-bold text-green-400 font-mono"> B.Tech in Computer
-                                            Science and Engineering
-                                        </h3>
-                                        <span class="text-gray-400 font-mono text-sm">2015 - 2019</span>
-                                    </div>
-                                    <h4 class="text-gray-300 font-mono mb-2">> SRM Institute of Science and Technology
-                                    </h4>
-                                    <ul class="text-gray-400 font-mono space-y-2 mt-4">
-                                        <li class="flex items-center">
-                                            <span class="text-green-500 mr-2">$</span>
-                                            Subjects: DBMS, Algorithms, Python Programming, Software Engineering
-                                        </li>
-                                        <li class="flex items-center">
-                                            <span class="text-green-500 mr-2">$</span>
-                                            GPA: 8.25/10.0
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- Certifications -->
-                                <div class="mt-8">
-                                    <span class="text-green-500 font-mono">$ cat digital_badge.sh</span>
-                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-4">
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/d257a3a5-40d2-4357-9eef-75f4bcb91a2f"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/containers-kubernetes-essentials.png"
-                                                    alt="Containers & Kubernetes Essentials"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                Containers & Kubernetes Essentials
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/696ed22f-a2fb-445c-b4ee-ac527c6f3142"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/engineering-excellence-academy-meraki.png"
-                                                    alt="Engineering Excellence Academy - Meraki"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                Engineering Excellence Academy - Meraki
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/f1c95127-f5bd-4da6-83e8-8dcb762b3ee4"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/devsecops-essentials.png" alt="DevSecOps Essentials"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                DevSecOps Essentials
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/beba2b57-c0d4-4a6d-bb07-90852b128b82"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/interskill-devops-fundamentals.png"
-                                                    alt="Interskill - DevOps Fundamentals"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                Interskill - DevOps Fundamentals
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/582bfda0-aaa5-4c54-b7bd-061231a601f8"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/ibm-xlence-advocate.png" alt="IBM Xlence Advocate"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                IBM Xlence Advocate
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/0b0af313-45c0-4354-9e4f-046b17d2d638"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/cloud-essentials.png" alt="Cloud Essentials"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                Cloud Essentials
-                                            </a>
-                                        </div>
-                                        <div
-                                            class="certification-badge bg-neutral-800/50 p-3 rounded-lg border border-green-500/20 flex flex-col">
-                                            <a href="https://www.credly.com/badges/6ec8d6df-e222-43e0-9110-3871fadee0c5"
-                                                target="_blank"
-                                                class="text-gray-300 font-mono hover:text-green-400 flex items-center gap-2">
-                                                <img src="./Docs/enterprise-design-thinking-practitioner.png"
-                                                    alt="Enterprise Design Thinking Practitioner"
-                                                    class="h-30 w-30 flex-shrink-0" />
-                                                Enterprise Design Thinking Practitioner
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('edu-toggle-yellow').addEventListener('click', function () {
-                        const content = this.closest('#edu-terminal-window').querySelector('.terminal-content');
-                        content.classList.toggle('collapsed');
-                    });
-                </script>
-            </div>
-        </section>
-    </div>
-</element>
-<element id="31f0a021-a106-402b-ab95-4c8ebe10f16d" data-section-id="31f0a021-a106-402b-ab95-4c8ebe10f16d">
-    <div id="root">
-        <section id="projects" class="bg-neutral-900 py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
-                    id="project-terminal-window">
-                    <div class="terminal-header flex items-center mb-6">
-                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
-                            <span class="icon">
-                                <!-- Cross -->
-                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
-                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
-                                </svg>
-                            </span>
-                        </div>
-                        <script>
-                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
-                                redBtn.addEventListener('click', function () {
-                                    const terminal = this.closest('.terminal-window');
-                                    const content = terminal.querySelector('.terminal-content');
-                                    // Save original content if not already saved
-                                    if (!content.dataset.originalHtml) {
-                                        content.dataset.originalHtml = content.innerHTML;
-                                    }
-                                    // Replace with exit message + input
-                                    content.innerHTML = `
-                                        <div class="text-green-500 font-mono">$ exit</div>
-                                        <div class="text-gray-300 font-mono mb-2">
-                                            Session closed. To resume, type "continue".
-                                        </div>
-                                        <div class="flex items-center font-mono text-green-500">
-                                            <span>$</span>
-                                            <input type="text" 
-                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
-                                                autofocus />
-                                        </div>
-                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
-                                    `;
-                                    const input = content.querySelector('.fake-terminal-input');
-                                    const errorMsg = content.querySelector('.command-error');
-                                    input.addEventListener('keydown', function (e) {
-                                        if (e.key === 'Enter') {
-                                            let val = this.value.trim().toLowerCase();
-
-                                            if (val === 'continue') {
-                                                content.innerHTML = content.dataset.originalHtml; // Restore original
-                                            } else {
-                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
-                                                errorMsg.style.display = 'block';
-                                                this.value = ''; // Clear input for retry
-                                            }
-                                        }
-                                    });
-                                });
-                            });
-                        </script>
-                        <div class="terminal-btn btn-yellow" id="projects-toggle-yellow" data-tooltip="Collapse/Expand">
-                            <span class="icon">
-                                <!-- Minus -->
-                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="terminal-btn btn-green" id="projects-green" data-tooltip="Fullscreen Mode">
-                            <span class="icon">
-                                <!-- Mac-style split triangle -->
-                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
-                                    <polygon points="2,2 2,6 6,2" />
-                                    <polygon points="8,8 4,8 8,4" />
-                                </svg>
-                            </span>
-                        </div>
-                        <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
-                    </div>
-                    <script>
-                        document.getElementById('projects-green').addEventListener('click', function () {
-                            const terminalWindow = this.closest('.terminal-window');
-
-                            if (!document.fullscreenElement) {
-                                terminalWindow.requestFullscreen().catch(err => {
-                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
-                                });
-                            } else {
-                                document.exitFullscreen();
-                            }
-                        });
-                    </script>
-                    <div class="terminal-content">
-                        <span class="text-green-500 font-mono">$ ls -la /projects/</span>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                            <!-- Project 1 -->
-                            <div
-                                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
-                                <div class="flex items-center justify-between mb-4">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">Cafeteria Management System
-                                    </h3>
-                                    <span class="text-gray-500 font-mono text-sm">2024</span>
-                                </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">A full-stack application built
-                                    from scratch to
-                                    streamline cafeteria management, with a focus on seamless deployment and scalability
-                                    🍽️📅⚙️</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Travis</span>
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
-                                </div>
-                                <div class="flex justify-end mt-auto">
-                                    <button onclick="openPopup1()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
-                                        Expand</button>
-                                </div>
-                            </div>
-                            <!-- Popup Overlay -->
-                            <div class="popup-overlay" id="popup-overlay1" onclick="closePopup1()"></div>
-                            <!-- Popup Content -->
-                            <div class="popup" id="popup1">
-                                <div class="terminal-header flex items-center justify-between mb-6">
-                                    <div class="flex items-center">
-                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
-                                        <span
-                                            class="ml-4 text-gray-400 font-mono text-sm">cafeteria_management_system.md</span>
-                                    </div>
-                                    <button onclick="closePopup1()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
-                                        Close</button>
-                                </div>
-                                <div class="popup-content">
-                                    <h3 class="text-green-400 font-mono text-xl font-bold">Cafeteria Management System
-                                    </h3>
-                                    <p class="text-gray-400 font-mono text-sm">A full-stack application built from
-                                        scratch to streamline
-                                        cafeteria management, with a focus on seamless deployment and scalability.</p>
-                                    <ul class="text-gray-300 font-mono text-sm space-y-2">
-                                        <li>- Built a CI/CD pipeline using Travis for automated deployment</li>
-                                        <li>- Created and optimized Docker images for containerized application
-                                            deployment</li>
-                                        <li>- Deployed the application by exposing Docker container ports for
-                                            accessibility</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- Project 2 -->
-                            <div
-                                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
-                                <div class="flex items-center justify-between mb-4">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">BioCube</h3>
-                                    <span class="text-gray-500 font-mono text-sm">2024</span>
-                                </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed BioCube, a hybrid
-                                    encryption
-                                    framework that enhances biometric security using BioHashing, barcode encoding, and
-                                    pseudo-random
-                                    transformations 🔒🧬</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image
-                                        Processing</span>
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Cryptography</span>
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Python</span>
-                                </div>
-                                <div class="flex justify-end mt-auto">
-                                    <button onclick="openPopup2()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
-                                        Expand</button>
-                                </div>
-                            </div>
-                            <!-- Popup Overlay -->
-                            <div class="popup-overlay" id="popup-overlay2" onclick="closePopup2()"></div>
-                            <!-- Popup Content -->
-                            <div class="popup" id="popup2">
-                                <div class="terminal-header flex items-center justify-between mb-6">
-                                    <div class="flex items-center">
-                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
-                                        <span class="ml-4 text-gray-400 font-mono text-sm">biocube.md</span>
-                                    </div>
-                                    <button onclick="closePopup2()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
-                                        Close</button>
-                                </div>
-                                <div class="popup-content">
-                                    <h3 class="text-green-400 font-mono text-xl font-bold">BioCube</h3>
-                                    <p class="text-gray-400 font-mono text-sm">Developed BioCube, a hybrid encryption
-                                        framework that
-                                        enhances biometric security using BioHashing, barcode encoding, and
-                                        pseudo-random transformations
-                                    </p>
-                                    <ul class="text-gray-300 font-mono text-sm space-y-2 pl-10">
-                                        <li>- Designed a biometric encryption framework to securely transform
-                                            fingerprint-vein data</li>
-                                        <li>- Developed novel encoding algorithm to generate secure biometric templates
-                                        </li>
-                                        <li>- Implemented novel Infinity Cube Transformations to enhance unlinkability
-                                            and reusability</li>
-                                    </ul>
-                                    <div class="flex justify-end">
-                                        <a href="https://github.com/Rohanjos97/BioCube" target="_blank"
-                                            class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
-                                            View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project 3 -->
-                            <div
-                                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
-                                <div class="flex items-center justify-between mb-4">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">Auto Inpainting</h3>
-                                    <span class="text-gray-500 font-mono text-sm">2023</span>
-                                </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed an adversarial patch
-                                    defense system
-                                    that detects and removes adversarial patches restoring model accuracy in a black-box
-                                    setting 🖼️🛠️
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer
-                                        Vision</span>
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image
-                                        Inpainting</span>
-                                    <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Deep
-                                        Learning</span>
-                                </div>
-                                <div class="flex justify-end mt-auto"> <!-- Ensures button stays at bottom -->
-                                    <button onclick="openPopup3()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
-                                        Expand</button>
-                                </div>
-                            </div>
-                            <!-- Popup Overlay -->
-                            <div class="popup-overlay" id="popup-overlay3" onclick="closePopup3()"></div>
-                            <!-- Popup Content -->
-                            <div class="popup" id="popup3">
-                                <div class="terminal-header flex items-center justify-between mb-6">
-                                    <div class="flex items-center">
-                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
-                                        <span class="ml-4 text-gray-400 font-mono text-sm">auto_inpainting.md</span>
-                                    </div>
-                                    <button onclick="closePopup3()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
-                                        Close</button>
-                                </div>
-                                <div class="popup-content">
-                                    <h3 class="text-green-400 font-mono text-xl font-bold">Auto Inpainting</h3>
-                                    <p class="text-gray-400 font-mono text-sm">Developed an adversarial patch defense
-                                        system that detects
-                                        and removes adversarial patches restoring model accuracy in a black-box setting
-                                    </p>
-                                    <ul class="text-gray-300 font-mono text-sm space-y-2">
-                                        <li>- Developed a black-box defense to remove adversarial patches without
-                                            retraining</li>
-                                        <li>- Used Class Activation Map for automatic attack region detection</li>
-                                        <li>- Compared different inpainting techniques based on accuracy to determine
-                                            their suitability</li>
-                                    </ul>
-                                    <div class="flex justify-end">
-                                        <a href="https://github.com/Rohanjos97/auto_inpainting" target="_blank"
-                                            class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
-                                            View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Project 4 -->
-                            <div
-                                class="project-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
-                                <div class="flex items-center justify-between mb-4">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">Basketball Prediction</h3>
-                                    <span class="text-gray-500 font-mono text-sm">2022</span>
-                                </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Built an AI-powered model to
-                                    predict whether a
-                                    basketball shot will land in the hoop using machine learning 🚀🏀</p>
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer
-                                        Vision</span>
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Object
-                                        Detection</span>
-                                    <span
-                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Machine
-                                        Learning</span>
-                                </div>
-                                <div class="flex justify-end mt-auto">
-                                    <button onclick="openPopup4()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
-                                        Expand</button>
-                                </div>
-                            </div>
-                            <!-- Popup Overlay -->
-                            <div class="popup-overlay" id="popup-overlay4" onclick="closePopup4()"></div>
-                            <!-- Popup Content -->
-                            <div class="popup" id="popup4">
-                                <div class="terminal-header flex items-center justify-between mb-6">
-                                    <div class="flex items-center">
-                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
-                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
-                                        <span
-                                            class="ml-4 text-gray-400 font-mono text-sm">basketbasll_prediction.md</span>
-                                    </div>
-                                    <button onclick="closePopup4()"
-                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
-                                        Close</button>
-                                </div>
-                                <div class="popup-content">
-                                    <h3 class="text-green-400 font-mono text-xl font-bold">Basketball Prediction</h3>
-                                    <p class="text-gray-400 font-mono text-sm">Built an AI-powered model to predict
-                                        whether a basketball
-                                        shot will land in the hoop using machine learning</p>
-                                    <ul class="text-gray-300 font-mono text-sm space-y-2">
-                                        <li>- Extracted the basketball from images and tracked it in video frames using
-                                            object detection
-                                        </li>
-                                        <li>- Processed real-time video buffer to analyze ball trajectory and movement
-                                        </li>
-                                        <li>- Applied regression models to predict whether the shot would land in the
-                                            hoop</li>
-                                    </ul>
-                                    <div class="flex justify-end">
-                                        <a href="https://github.com/Rohanjos97/basketball_prediction" target="_blank"
-                                            class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
-                                            View Project</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8 text-center">
-                            <a href="https://github.com/Rohanjos97?tab=repositories" target="_blank"
-                                class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-200">
-                                $ git clone more-projects
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    document.getElementById('projects-toggle-yellow').addEventListener('click', function () {
-                        const content = this.closest('#project-terminal-window').querySelector('.terminal-content');
-                        content.classList.toggle('collapsed');
-                    });
-                </script>
-            </div>
-        </section>
-    </div>
-</element>
 <element id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2" data-section-id="f77b93a5-b4e1-4e30-9ed3-8e8facecefe2">
     <div id="root">
-        <section id="skills" class="bg-neutral-800 py-20">
+        <section id="skills" class="bg-neutral-900 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
+                <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
                     id="skills-terminal-window">
                     <div class="terminal-header flex items-center mb-6">
                         <div class="terminal-btn btn-red" data-tooltip="Exit Session">
@@ -1948,11 +1155,11 @@
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Programming</h3>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div
-                                        class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                                        class="skill-badge bg-neutral-900 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
                                         <span class="text-gray-300 font-mono">Python</span>
                                     </div>
                                     <div
-                                        class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                                        class="skill-badge bg-neutral-900 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
                                         <span class="text-gray-300 font-mono">Bash</span>
                                     </div>
                                 </div>
@@ -1962,11 +1169,11 @@
                                 <h3 class="text-green-400 font-mono text-xl mb-4">> Tools & Platforms</h3>
                                 <div class="grid grid-cols-2 gap-4">
                                     <div
-                                        class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                                        class="skill-badge bg-neutral-900 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
                                         <span class="text-gray-300 font-mono">Git</span>
                                     </div>
                                     <div
-                                        class="skill-badge bg-neutral-800 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
+                                        class="skill-badge bg-neutral-900 p-3 rounded-lg border border-green-500/20 hover:border-green-500/50 transition-all duration-300">
                                         <span class="text-gray-300 font-mono">Linux</span>
                                     </div>
                                 </div>
@@ -1984,11 +1191,1088 @@
         </section>
     </div>
 </element>
-<element id="5bae4959-892f-40f8-81c2-2540d3ec6aba" data-section-id="5bae4959-892f-40f8-81c2-2540d3ec6aba">
+<element id="8e47cb49-fbf0-479e-922e-020305748c74" data-section-id="8e47cb49-fbf0-479e-922e-020305748c74">
     <div id="root">
-        <section id="publications" class="bg-neutral-900 py-20">
+        <section id="experience" class="bg-neutral-800 py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
+                    id="work-e-terminal-window">
+                    <div class="terminal-header flex items-center mb-6">
+                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
+                            <span class="icon">
+                                <!-- Cross -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
+                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
+                                </svg>
+                            </span>
+                        </div>
+                        <script>
+                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
+                                redBtn.addEventListener('click', function () {
+                                    const terminal = this.closest('.terminal-window');
+                                    const content = terminal.querySelector('.terminal-content');
+                                    // Save original content if not already saved
+                                    if (!content.dataset.originalHtml) {
+                                        content.dataset.originalHtml = content.innerHTML;
+                                    }
+                                    // Replace with exit message + input
+                                    content.innerHTML = `
+                                        <div class="text-green-500 font-mono">$ exit</div>
+                                        <div class="text-gray-300 font-mono mb-2">
+                                            Session closed. To resume, type "continue".
+                                        </div>
+                                        <div class="flex items-center font-mono text-green-500">
+                                            <span>$</span>
+                                            <input type="text" 
+                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
+                                                autofocus />
+                                        </div>
+                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
+                                    `;
+                                    const input = content.querySelector('.fake-terminal-input');
+                                    const errorMsg = content.querySelector('.command-error');
+
+                                    input.addEventListener('keydown', function (e) {
+                                        if (e.key === 'Enter') {
+                                            let val = this.value.trim().toLowerCase();
+
+                                            if (val === 'continue') {
+                                                content.innerHTML = content.dataset.originalHtml; // Restore original
+                                            } else {
+                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
+                                                errorMsg.style.display = 'block';
+                                                this.value = ''; // Clear input for retry
+                                            }
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                        <div class="terminal-btn btn-yellow" id="exp-toggle-yellow" data-tooltip="Collapse/Expand">
+                            <span class="icon">
+                                <!-- Minus -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
+                                </svg>
+                            </span>
+                        </div>
+
+                        <div class="terminal-btn btn-green" id="work-experience-green" data-tooltip="Fullscreen Mode">
+                            <span class="icon">
+                                <!-- Mac-style split triangle -->
+                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="2,2 2,6 6,2" />
+                                    <polygon points="8,8 4,8 8,4" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="ml-4 text-gray-400 font-mono text-sm">work_experience.sh</span>
+                    </div>
+                    <script>
+                        document.getElementById('work-experience-green').addEventListener('click', function () {
+                            const terminalWindow = this.closest('.terminal-window');
+
+                            if (!document.fullscreenElement) {
+                                terminalWindow.requestFullscreen().catch(err => {
+                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                                });
+                            } else {
+                                document.exitFullscreen();
+                            }
+                        });
+                    </script>
+                    <div class="terminal-content space-y-8">
+                        <div class="animate__animated animate__fadeIn">
+                            <span class="text-green-500 font-mono">$ cat experience.log</span>
+
+                            <div class="mt-6 space-y-8">
+                                <!-- Experience 1 -->
+                                <div
+                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Engineer</h3>
+                                        <span class="text-gray-400 font-mono text-sm">July, 2024 - Present</span>
+                                    </div>
+                                    <h4 class="text-gray-300 font-mono mb-2">IBM India Software Lab, Gandhinagar, India
+                                    </h4>
+                                    <ul class="text-gray-400 font-mono space-y-2">
+                                        <li>> Automate deployment pipelines using Python/Shell scripting</li>
+                                        <li>> Manage Kubernetes and OpenShift (OCP) deployments for seamless rollouts
+                                        </li>
+                                        <li>> Optimize CI/CD workflows with Travis CI</li>
+                                        <li>> Collaborate with dev and ops teams to streamline deployments</li>
+                                        <li>> Enhance release processes by reducing manual interventions</li>
+                                    </ul>
+                                </div>
+                                <!-- Experience 2 -->
+                                <div
+                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-green-400 font-mono">DevOps Intern</h3>
+                                        <span class="text-gray-400 font-mono text-sm">Jan, 2024 - July, 2024</span>
+                                    </div>
+                                    <h4 class="text-gray-300 font-mono mb-2">IBM India Software Lab, Gandhinagar, India
+                                    </h4>
+                                    <ul class="text-gray-400 font-mono space-y-2">
+                                        <li>> Gained hands-on experience with CI/CD processes, learning to automate
+                                            deployments</li>
+                                        <li>> Developed Shell and Python scripts for basic automation tasks and system
+                                            monitoring</li>
+                                        <li>> Explored Kubernetes and OpenShift, assisting in deployment and
+                                            troubleshooting</li>
+                                        <li>> Worked with Travis CI, setting up simple pipelines and understanding build
+                                            workflows</li>
+                                        <li>> Reduced deployment time by 70% through CI/CD pipeline optimization</li>
+                                        <li>> Collaborated with senior engineers, gaining insights into DevOps best
+                                            practices</li>
+                                    </ul>
+                                </div>
+                                <!-- Experience 3 -->
+                                <div
+                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-green-400 font-mono">Machine Learning Intern
+                                        </h3>
+                                        <span class="text-gray-400 font-mono text-sm">May, 2023 - July, 2023</span>
+                                    </div>
+                                    <h4 class="text-gray-300 font-mono mb-2">Clomotech, Gandhinagar, India</h4>
+                                    <ul class="text-gray-400 font-mono space-y-2">
+                                        <li>> Developed an ML-based solution to predict SPY (S&P 500 ETF) using a
+                                            5-minute timeframe dataset
+                                        </li>
+                                        <li>> Utilized hybrid time-series models, AutoML, and classification techniques
+                                            to improve accuracy
+                                            and performance</li>
+                                        <li>> Optimized predictive models for enhanced reliability in financial market
+                                            forecasting</li>
+                                    </ul>
+                                </div>
+                                <!-- Experience 4 -->
+                                <div
+                                    class="experience-card hover:bg-neutral-700/30 p-4 rounded-lg transition-all duration-300">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-green-400 font-mono">Software Engineer</h3>
+                                        <span class="text-gray-400 font-mono text-sm">Jan, 2019 - Jan, 2021</span>
+                                    </div>
+                                    <h4 class="text-gray-300 font-mono mb-2">Oracle Cerner, Bangalore, India</h4>
+                                    <ul class="text-gray-400 font-mono space-y-2">
+                                        <li>> Assumed primary responsibility for front-end development</li>
+                                        <li>> Established best practices to ensure code quality and team-wide
+                                            maintainability</li>
+                                        <li>> Leading feature implementation and bug resolution to ensure seamless
+                                            functionality</li>
+                                        <li>> Supported new team members in application onboarding and resolving
+                                            technical roadblocks</li>
+                                        <li>> Built fast and responsive websites using React and JavaScript</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('exp-toggle-yellow').addEventListener('click', function () {
+                        const content = this.closest('#work-e-terminal-window').querySelector('.terminal-content');
+                        content.classList.toggle('collapsed');
+                    });
+                </script>
+            </div>
+        </section>
+    </div>
+</element>
+<element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
+    <div id="root">
+        <section id="education" class="bg-neutral-900 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
+                    id="edu-terminal-window">
+                    <div class="terminal-header flex items-center mb-6">
+                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
+                            <span class="icon">
+                                <!-- Cross -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
+                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
+                                </svg>
+                            </span>
+                        </div>
+                        <script>
+                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
+                                redBtn.addEventListener('click', function () {
+                                    const terminal = this.closest('.terminal-window');
+                                    const content = terminal.querySelector('.terminal-content');
+                                    // Save original content if not already saved
+                                    if (!content.dataset.originalHtml) {
+                                        content.dataset.originalHtml = content.innerHTML;
+                                    }
+                                    // Replace with exit message + input
+                                    content.innerHTML = `
+                                        <div class="text-green-500 font-mono">$ exit</div>
+                                        <div class="text-gray-300 font-mono mb-2">
+                                            Session closed. To resume, type "continue".
+                                        </div>
+                                        <div class="flex items-center font-mono text-green-500">
+                                            <span>$</span>
+                                            <input type="text" 
+                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
+                                                autofocus />
+                                        </div>
+                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
+                                    `;
+                                    const input = content.querySelector('.fake-terminal-input');
+                                    const errorMsg = content.querySelector('.command-error');
+                                    input.addEventListener('keydown', function (e) {
+                                        if (e.key === 'Enter') {
+                                            let val = this.value.trim().toLowerCase();
+
+                                            if (val === 'continue') {
+                                                content.innerHTML = content.dataset.originalHtml; // Restore original
+                                            } else {
+                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
+                                                errorMsg.style.display = 'block';
+                                                this.value = ''; // Clear input for retry
+                                            }
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                        <div class="terminal-btn btn-yellow" id="edu-toggle-yellow" data-tooltip="Collapse/Expand">
+                            <span class="icon">
+                                <!-- Minus -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="terminal-btn btn-green" id="education-green" data-tooltip="Fullscreen Mode">
+                            <span class="icon">
+                                <!-- Mac-style split triangle -->
+                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="2,2 2,6 6,2" />
+                                    <polygon points="8,8 4,8 8,4" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="ml-4 text-gray-400 font-mono text-sm">education.sh</span>
+                    </div>
+                    <script>
+                        document.getElementById('education-green').addEventListener('click', function () {
+                            const terminalWindow = this.closest('.terminal-window');
+
+                            if (!document.fullscreenElement) {
+                                terminalWindow.requestFullscreen().catch(err => {
+                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                                });
+                            } else {
+                                document.exitFullscreen();
+                            }
+                        });
+                    </script>
+                    <div class="terminal-content">
+                        <div class="animate__animated animate__fadeIn">
+                            <span class="text-green-500 font-mono">$ ls -la /education/</span>
+                            <div class="mt-6 space-y-6">
+                                <!-- Education 1 -->
+                                <div
+                                    class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/50">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-green-400 font-mono"> M.Tech in Information
+                                            and Communication Technology (ICT)</h3>
+                                        <span class="text-gray-400 font-mono text-sm">2022 - 2024</span>
+                                    </div>
+                                    <h4 class="text-gray-300 font-mono mb-2">> Dhirubhai Ambani University</h4>
+                                    <h4 class="text-gray-300 font-mono mb-2"> &nbsp; formerly known as Dhirubhai Ambani
+                                        Institute of
+                                        Information and Communication Technology</h4>
+                                    <ul class="text-gray-400 font-mono space-y-2 mt-4">
+                                        <li class="flex items-center">
+                                            <span class="text-green-500 mr-2">$</span>
+                                            Specialization in Machine Learning (ML)
+                                        </li>
+                                        <li class="flex items-center">
+                                            <span class="text-green-500 mr-2">$</span>
+                                            CGPA: 9.18/10.0
+                                        </li>
+                                        <li class="flex items-center">
+                                            <span class="text-green-500 mr-2">$</span>
+                                            Research Focus: Adversarial Machine Learning, Computer Vision
+                                        </li>
+                                        <!-- Teaching Assistant Role -->
+                                        <li class="flex items-start">
+                                            <span class="text-green-500 mr-2">$</span>
+                                            <div>
+                                                <span class="text-green-400 font-bold">Teaching Assistant</span> <span
+                                                    class="text-gray-500">(2022 – 2024)</span>
+                                                <ul class="ml-6 list-disc text-gray-500">
+                                                    <li>Introduction to DBMS</li>
+                                                    <li>Programming in C</li>
+                                                    <li>Introduction to Machine Learning</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Education 2 -->
+                                <div
+                                    class="education-card hover:bg-neutral-800/50 p-4 rounded-lg transition-all duration-300 border border-green-500/50">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                                        <h3 class="text-xl font-bold text-green-400 font-mono"> B.Tech in Computer
+                                            Science and Engineering
+                                        </h3>
+                                        <span class="text-gray-400 font-mono text-sm">2015 - 2019</span>
+                                    </div>
+                                    <h4 class="text-gray-300 font-mono mb-2">> SRM Institute of Science and Technology
+                                    </h4>
+                                    <ul class="text-gray-400 font-mono space-y-2 mt-4">
+                                        <li class="flex items-center">
+                                            <span class="text-green-500 mr-2">$</span>
+                                            Subjects: DBMS, Algorithms, Python Programming, Software Engineering
+                                        </li>
+                                        <li class="flex items-center">
+                                            <span class="text-green-500 mr-2">$</span>
+                                            GPA: 8.25/10.0
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('edu-toggle-yellow').addEventListener('click', function () {
+                        const content = this.closest('#edu-terminal-window').querySelector('.terminal-content');
+                        content.classList.toggle('collapsed');
+                    });
+                </script>
+        </section>
+    </div>
+</element>
+<element id="31f0a021-a106-402b-ab95-4c8ebe10f16d" data-section-id="31f0a021-a106-402b-ab95-4c8ebe10f16d">
+    <div id="root">
+        <section id="projects" class="bg-neutral-800 py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
+                    id="project-terminal-window">
+                    <div class="terminal-header flex items-center mb-6">
+                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
+                            <span class="icon">
+                                <!-- Cross -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
+                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
+                                </svg>
+                            </span>
+                        </div>
+                        <script>
+                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
+                                redBtn.addEventListener('click', function () {
+                                    const terminal = this.closest('.terminal-window');
+                                    const content = terminal.querySelector('.terminal-content');
+                                    // Save original content if not already saved
+                                    if (!content.dataset.originalHtml) {
+                                        content.dataset.originalHtml = content.innerHTML;
+                                    }
+                                    // Replace with exit message + input
+                                    content.innerHTML = `
+                                        <div class="text-green-500 font-mono">$ exit</div>
+                                        <div class="text-gray-300 font-mono mb-2">
+                                            Session closed. To resume, type "continue".
+                                        </div>
+                                        <div class="flex items-center font-mono text-green-500">
+                                            <span>$</span>
+                                            <input type="text" 
+                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
+                                                autofocus />
+                                        </div>
+                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
+                                    `;
+                                    const input = content.querySelector('.fake-terminal-input');
+                                    const errorMsg = content.querySelector('.command-error');
+                                    input.addEventListener('keydown', function (e) {
+                                        if (e.key === 'Enter') {
+                                            let val = this.value.trim().toLowerCase();
+
+                                            if (val === 'continue') {
+                                                content.innerHTML = content.dataset.originalHtml; // Restore original
+                                            } else {
+                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
+                                                errorMsg.style.display = 'block';
+                                                this.value = ''; // Clear input for retry
+                                            }
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                        <div class="terminal-btn btn-yellow" id="projects-toggle-yellow" data-tooltip="Collapse/Expand">
+                            <span class="icon">
+                                <!-- Minus -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="terminal-btn btn-green" id="projects-green" data-tooltip="Fullscreen Mode">
+                            <span class="icon">
+                                <!-- Mac-style split triangle -->
+                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="2,2 2,6 6,2" />
+                                    <polygon points="8,8 4,8 8,4" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="ml-4 text-gray-400 font-mono text-sm">projects.sh</span>
+                    </div>
+                    <script>
+                        document.getElementById('projects-green').addEventListener('click', function () {
+                            const terminalWindow = this.closest('.terminal-window');
+
+                            if (!document.fullscreenElement) {
+                                terminalWindow.requestFullscreen().catch(err => {
+                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                                });
+                            } else {
+                                document.exitFullscreen();
+                            }
+                        });
+                    </script>
+                    <div class="terminal-content">
+                        <span class="text-green-500 font-mono">$ ls -la /projects/</span>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                            <!-- Project 1 -->
+                            <div
+                                class="project-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">Cafeteria Management System
+                                    </h3>
+                                    <span class="text-gray-500 font-mono text-sm">2024</span>
+                                </div>
+                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">A full-stack application built
+                                    from scratch to
+                                    streamline cafeteria management, with a focus on seamless deployment and scalability
+                                    🍽️📅⚙️</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Travis</span>
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Docker</span>
+                                </div>
+                                <div class="flex justify-end mt-auto">
+                                    <button onclick="openPopup1()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
+                                        Expand</button>
+                                </div>
+                            </div>
+                            <!-- Popup Overlay -->
+                            <div class="popup-overlay" id="popup-overlay1" onclick="closePopup1()"></div>
+                            <!-- Popup Content -->
+                            <div class="popup" id="popup1">
+                                <div class="terminal-header flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
+                                        <span
+                                            class="ml-4 text-gray-400 font-mono text-sm">cafeteria_management_system.md</span>
+                                    </div>
+                                    <button onclick="closePopup1()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                                        Close</button>
+                                </div>
+                                <div class="popup-content">
+                                    <h3 class="text-green-400 font-mono text-xl font-bold">Cafeteria Management System
+                                    </h3>
+                                    <p class="text-gray-400 font-mono text-sm">A full-stack application built from
+                                        scratch to streamline
+                                        cafeteria management, with a focus on seamless deployment and scalability.</p>
+                                    <ul class="text-gray-300 font-mono text-sm space-y-2">
+                                        <li>- Built a CI/CD pipeline using Travis for automated deployment</li>
+                                        <li>- Created and optimized Docker images for containerized application
+                                            deployment</li>
+                                        <li>- Deployed the application by exposing Docker container ports for
+                                            accessibility</li>
+                                    </ul>
+                                    <h4 class="text-green-400 font-mono text-sm font-semibold mt-4">> Tech Stack</h4>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Python</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">React.js</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Docker</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Project 2 -->
+                            <div
+                                class="project-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">BioCube</h3>
+                                    <span class="text-gray-500 font-mono text-sm">2024</span>
+                                </div>
+                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed BioCube, a hybrid
+                                    encryption
+                                    framework that enhances biometric security using BioHashing, barcode encoding, and
+                                    pseudo-random
+                                    transformations 🔒🧬</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image
+                                        Processing</span>
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Cryptography</span>
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Python</span>
+                                </div>
+                                <div class="flex justify-end mt-auto">
+                                    <button onclick="openPopup2()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
+                                        Expand</button>
+                                </div>
+                            </div>
+                            <!-- Popup Overlay -->
+                            <div class="popup-overlay" id="popup-overlay2" onclick="closePopup2()"></div>
+                            <!-- Popup Content -->
+                            <div class="popup" id="popup2">
+                                <div class="terminal-header flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
+                                        <span class="ml-4 text-gray-400 font-mono text-sm">biocube.md</span>
+                                    </div>
+                                    <button onclick="closePopup2()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                                        Close</button>
+                                </div>
+                                <div class="popup-content">
+                                    <h3 class="text-green-400 font-mono text-xl font-bold">BioCube</h3>
+                                    <p class="text-gray-400 font-mono text-sm">Developed BioCube, a hybrid encryption
+                                        framework that
+                                        enhances biometric security using BioHashing, barcode encoding, and
+                                        pseudo-random transformations
+                                    </p>
+                                    <ul class="text-gray-300 font-mono text-sm space-y-2 pl-10">
+                                        <li>- Designed a biometric encryption framework to securely transform
+                                            fingerprint-vein data</li>
+                                        <li>- Developed novel encoding algorithm to generate secure biometric templates
+                                        </li>
+                                        <li>- Implemented novel Infinity Cube Transformations to enhance unlinkability
+                                            and reusability</li>
+                                    </ul>
+                                    <h4 class="text-green-400 font-mono text-sm font-semibold mt-4">> Tech Stack</h4>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Python</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Numpy</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Pandas</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Image
+                                            Processing</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Cryptography</span>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <a href="https://github.com/Rohanjos97/BioCube" target="_blank"
+                                            class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                                            View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 3 -->
+                            <div
+                                class="project-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">Auto Inpainting</h3>
+                                    <span class="text-gray-500 font-mono text-sm">2023</span>
+                                </div>
+                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Developed an adversarial patch
+                                    defense system
+                                    that detects and removes adversarial patches restoring model accuracy in a black-box
+                                    setting 🖼️🛠️
+                                </p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer
+                                        Vision</span>
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Image
+                                        Inpainting</span>
+                                    <span class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Deep
+                                        Learning</span>
+                                </div>
+                                <div class="flex justify-end mt-auto"> <!-- Ensures button stays at bottom -->
+                                    <button onclick="openPopup3()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
+                                        Expand</button>
+                                </div>
+                            </div>
+                            <!-- Popup Overlay -->
+                            <div class="popup-overlay" id="popup-overlay3" onclick="closePopup3()"></div>
+                            <!-- Popup Content -->
+                            <div class="popup" id="popup3">
+                                <div class="terminal-header flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
+                                        <span class="ml-4 text-gray-400 font-mono text-sm">auto_inpainting.md</span>
+                                    </div>
+                                    <button onclick="closePopup3()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                                        Close</button>
+                                </div>
+                                <div class="popup-content">
+                                    <h3 class="text-green-400 font-mono text-xl font-bold">Auto Inpainting</h3>
+                                    <p class="text-gray-400 font-mono text-sm">Developed an adversarial patch defense
+                                        system that detects
+                                        and removes adversarial patches restoring model accuracy in a black-box setting
+                                    </p>
+                                    <ul class="text-gray-300 font-mono text-sm space-y-2">
+                                        <li>- Developed a black-box defense to remove adversarial patches without
+                                            retraining</li>
+                                        <li>- Used Class Activation Map for automatic attack region detection</li>
+                                        <li>- Compared different inpainting techniques based on accuracy to determine
+                                            their suitability</li>
+                                    </ul>
+                                    <h4 class="text-green-400 font-mono text-sm font-semibold mt-4">> Tech Stack</h4>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Python</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">OpenCV</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Numpy</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Pandas</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Deep
+                                            Learning</span>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <a href="https://github.com/Rohanjos97/auto_inpainting" target="_blank"
+                                            class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                                            View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 4 -->
+                            <div
+                                class="project-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300 group flex flex-col h-full">
+                                <div class="flex items-center justify-between mb-4">
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">Basketball Prediction</h3>
+                                    <span class="text-gray-500 font-mono text-sm">2022</span>
+                                </div>
+                                <p class="text-gray-400 font-mono text-sm mb-4 flex-grow">Built an AI-powered model to
+                                    predict whether a
+                                    basketball shot will land in the hoop using machine learning 🚀🏀</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer
+                                        Vision</span>
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Object
+                                        Detection</span>
+                                    <span
+                                        class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Machine
+                                        Learning</span>
+                                </div>
+                                <div class="flex justify-end mt-auto">
+                                    <button onclick="openPopup4()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm flex items-center">[+]
+                                        Expand</button>
+                                </div>
+                            </div>
+                            <!-- Popup Overlay -->
+                            <div class="popup-overlay" id="popup-overlay4" onclick="closePopup4()"></div>
+                            <!-- Popup Content -->
+                            <div class="popup" id="popup4">
+                                <div class="terminal-header flex items-center justify-between mb-6">
+                                    <div class="flex items-center">
+                                        <!-- <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                        <div class="w-3 h-3 rounded-full bg-green-500"></div> -->
+                                        <span
+                                            class="ml-4 text-gray-400 font-mono text-sm">basketbasll_prediction.md</span>
+                                    </div>
+                                    <button onclick="closePopup4()"
+                                        class="text-green-500 hover:text-green-400 font-mono text-sm">[x]
+                                        Close</button>
+                                </div>
+                                <div class="popup-content">
+                                    <h3 class="text-green-400 font-mono text-xl font-bold">Basketball Prediction</h3>
+                                    <p class="text-gray-400 font-mono text-sm">Built an AI-powered model to predict
+                                        whether a basketball
+                                        shot will land in the hoop using machine learning</p>
+                                    <ul class="text-gray-300 font-mono text-sm space-y-2">
+                                        <li>- Extracted the basketball from images and tracked it in video frames using
+                                            object detection
+                                        </li>
+                                        <li>- Processed real-time video buffer to analyze ball trajectory and movement
+                                        </li>
+                                        <li>- Applied regression models to predict whether the shot would land in the
+                                            hoop</li>
+                                    </ul>
+                                    <h4 class="text-green-400 font-mono text-sm font-semibold mt-4">> Tech Stack</h4>
+                                    <div class="flex flex-wrap gap-2 mt-2">
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Python</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">OpenCV</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Numpy</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Pandas</span>
+                                        <span
+                                            class="bg-gray-800 text-green-400 px-3 py-1 rounded font-mono text-sm">Scikit-learn</span>
+                                    </div>
+                                    <div class="flex justify-end">
+                                        <a href="https://github.com/Rohanjos97/basketball_prediction" target="_blank"
+                                            class="text-green-500 hover:text-green-400 font-mono text-sm group-hover:translate-x-2 transition-transform duration-300">>
+                                            View Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <a href="https://github.com/Rohanjos97?tab=repositories" target="_blank"
+                                class="inline-block bg-green-500 hover:bg-green-600 text-neutral-900 font-mono py-2 px-6 rounded-lg transition-colors duration-200">
+                                $ git clone more-projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    document.getElementById('projects-toggle-yellow').addEventListener('click', function () {
+                        const content = this.closest('#project-terminal-window').querySelector('.terminal-content');
+                        content.classList.toggle('collapsed');
+                    });
+                </script>
+            </div>
+        </section>
+    </div>
+</element>
+<element id="b9386153-77d5-4ba2-9942-52c663c27d64" data-section-id="b9386153-77d5-4ba2-9942-52c663c27d64">
+    <div id="root">
+        <section id="certificates" class="bg-neutral-900 py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
+                    id="cert-terminal-window">
+                    <div class="terminal-header flex items-center mb-6">
+                        <div class="terminal-btn btn-red" data-tooltip="Exit Session">
+                            <span class="icon">
+                                <!-- Cross -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="1" y1="1" x2="7" y2="7" stroke="black" stroke-width="1.5" />
+                                    <line x1="7" y1="1" x2="1" y2="7" stroke="black" stroke-width="1.5" />
+                                </svg>
+                            </span>
+                        </div>
+                        <script>
+                            document.querySelectorAll('.btn-red').forEach((redBtn) => {
+                                redBtn.addEventListener('click', function () {
+                                    const terminal = this.closest('.terminal-window');
+                                    const content = terminal.querySelector('.terminal-content');
+                                    // Save original content if not already saved
+                                    if (!content.dataset.originalHtml) {
+                                        content.dataset.originalHtml = content.innerHTML;
+                                    }
+                                    // Replace with exit message + input
+                                    content.innerHTML = `
+                                        <div class="text-green-500 font-mono">$ exit</div>
+                                        <div class="text-gray-300 font-mono mb-2">
+                                            Session closed. To resume, type "continue".
+                                        </div>
+                                        <div class="flex items-center font-mono text-green-500">
+                                            <span>$</span>
+                                            <input type="text" 
+                                                class="bg-transparent border-none outline-none text-gray-200 ml-2 w-full fake-terminal-input" 
+                                                autofocus />
+                                        </div>
+                                        <div class="text-red-500 font-mono mt-2 command-error" style="display:none;"></div>
+                                    `;
+                                    const input = content.querySelector('.fake-terminal-input');
+                                    const errorMsg = content.querySelector('.command-error');
+                                    input.addEventListener('keydown', function (e) {
+                                        if (e.key === 'Enter') {
+                                            let val = this.value.trim().toLowerCase();
+
+                                            if (val === 'continue') {
+                                                content.innerHTML = content.dataset.originalHtml; // Restore original
+                                            } else {
+                                                errorMsg.textContent = `command not found: ${this.value.trim()}`;
+                                                errorMsg.style.display = 'block';
+                                                this.value = ''; // Clear input for retry
+                                            }
+                                        }
+                                    });
+                                });
+                            });
+                        </script>
+                        <div class="terminal-btn btn-yellow" id="cert-toggle-yellow" data-tooltip="Collapse/Expand">
+                            <span class="icon">
+                                <!-- Minus -->
+                                <svg viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="-9" y1="4" x2="16" y2="4" stroke="black" stroke-width="9" />
+                                </svg>
+                            </span>
+                        </div>
+
+
+                        <div class="terminal-btn btn-green" id="cert-green" data-tooltip="Fullscreen Mode">
+                            <span class="icon">
+                                <!-- Mac-style split triangle -->
+                                <svg viewBox="0 0 10 10" fill="black" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="2,2 2,6 6,2" />
+                                    <polygon points="8,8 4,8 8,4" />
+                                </svg>
+                            </span>
+                        </div>
+                        <span class="ml-4 text-gray-400 font-mono text-sm">certificates.sh</span>
+                    </div>
+                    <script>
+                        document.getElementById('cert-green').addEventListener('click', function () {
+                            const terminalWindow = this.closest('.terminal-window');
+
+                            if (!document.fullscreenElement) {
+                                terminalWindow.requestFullscreen().catch(err => {
+                                    console.error(`Error attempting to enable fullscreen: ${err.message}`);
+                                });
+                            } else {
+                                document.exitFullscreen();
+                            }
+                        });
+                    </script>
+                    <div class="terminal-content">
+                        <div class="animate__animated animate__fadeIn">
+
+                            <!-- Advanced Certificates -->
+                            <span class="text-green-500 font-mono">$ ls -la /certificates/intermediate/</span>
+                            <div class="mt-6 space-y-6">
+                                <div class="grid grid-cols-1 gap-4 mt-4">
+
+                                    <!-- Containers & Kubernetes Essentials -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/containers-kubernetes-essentials.png"
+                                                alt="Containers & Kubernetes Essentials"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">Containers & Kubernetes
+                                                    Essentials</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Cloud,
+                                                    Containerization, IBM Cloud, Kubernetes</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: August 2025</p>
+                                                <a href="https://www.credly.com/badges/d257a3a5-40d2-4357-9eef-75f4bcb91a2f"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Engineering Excellence Academy - Meraki -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/engineering-excellence-academy-meraki.png"
+                                                alt="Engineering Excellence Academy - Meraki"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">Engineering Excellence
+                                                    Academy - Meraki</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Innovation,
+                                                    Creativity, Software Development, Monitoring & Observability</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: July 2025</p>
+                                                <a href="https://www.credly.com/badges/696ed22f-a2fb-445c-b4ee-ac527c6f3142"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Intermediate Certificates -->
+                            <span class="text-green-500 font-mono mt-8 block">$ ls -la
+                                /certificates/foundational/</span>
+                            <div class="mt-6 space-y-6">
+                                <div class="grid grid-cols-1 gap-4 mt-4">
+
+                                    <!-- 2025 IBMer watsonx Challenge -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/devsecops-essentials.png"
+                                                alt="2025 IBMer watsonx Challenge" class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">2025 IBMer watsonx
+                                                    Challenge</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Agentic AI,
+                                                    Generative AI, watsonx, watsonx.ai, watsonx Orchestrate</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: August 2025</p>
+                                                <a href="https://www.credly.com/badges/95b1ce51-da61-4322-a8bd-c6da46f0ee2e"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- DevSecOps Essentials -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/devsecops-essentials.png" alt="DevSecOps Essentials"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">DevSecOps Essentials</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Collaboration,
+                                                    Principles, DevOps, Secure CI/CD, Cloud Security</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: July 2025</p>
+                                                <a href="https://www.credly.com/badges/f1c95127-f5bd-4da6-83e8-8dcb762b3ee4"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Interskill - DevOps Fundamentals -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/interskill-devops-fundamentals.png"
+                                                alt="Interskill - DevOps Fundamentals"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">Interskill - DevOps
+                                                    Fundamentals</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: DevOps, CI/CD,
+                                                    Quality Assurance</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: August 2024</p>
+                                                <a href="https://www.credly.com/badges/beba2b57-c0d4-4a6d-bb07-90852b128b82"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Cloud Essentials -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/cloud-essentials.png" alt="Cloud Essentials"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">Cloud Essentials</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Cloud Basics,
+                                                    Containerization, SaaS/PaaS/IaaS</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: May 2024</p>
+                                                <a href="https://www.credly.com/badges/0b0af313-45c0-4354-9e4f-046b17d2d638"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Personal Growth -->
+                            <span class="text-green-500 font-mono mt-8 block">$ ls -la
+                                /certificates/personal-growth/</span>
+                            <div class="mt-6 space-y-6">
+                                <div class="grid grid-cols-1 gap-4 mt-4">
+
+                                    <!-- IBM Xlence Advocate -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/ibm-xlence-advocate.png" alt="IBM Xlence Advocate"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">IBM Xlence Advocate</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Creativity,
+                                                    Innovation, Programmer</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: July 2024</p>
+                                                <a href="https://www.credly.com/badges/582bfda0-aaa5-4c54-b7bd-061231a601f8"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Enterprise Design Thinking Practitioner -->
+                                    <div
+                                        class="certification-badge bg-neutral-900/50 p-4 rounded-lg border border-green-500/50 flex flex-col">
+                                        <div class="flex items-center gap-4">
+                                            <img src="./Docs/enterprise-design-thinking-practitioner.png"
+                                                alt="Enterprise Design Thinking Practitioner"
+                                                class="h-20 w-20 flex-shrink-0" />
+                                            <div>
+                                                <h3 class="text-green-400 font-mono text-lg">Enterprise Design Thinking
+                                                    Practitioner</h3>
+                                                <p class="text-gray-400 font-mono text-sm">Skills: Design Thinking,
+                                                    Ideation, User Experience, User Research</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issuer: IBM</p>
+                                                <p class="text-gray-500 font-mono text-xs">Issued: January 2024</p>
+                                                <a href="https://www.credly.com/badges/6ec8d6df-e222-43e0-9110-3871fadee0c5"
+                                                    target="_blank"
+                                                    class="inline-block mt-2 px-3 py-1 text-xs text-green-400 border border-green-400 rounded hover:bg-green-400 hover:text-black font-mono">
+                                                    Verify Credential
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </script>
+            </div>
+            <script>
+                document.getElementById('cert-toggle-yellow').addEventListener('click', function () {
+                    const content = this.closest('#cert-terminal-window').querySelector('.terminal-content');
+                    content.classList.toggle('collapsed');
+                });
+            </script>
+        </section>
+    </div>
+</element>
+<element id="5bae4959-892f-40f8-81c2-2540d3ec6aba" data-section-id="5bae4959-892f-40f8-81c2-2540d3ec6aba">
+    <div id="root">
+        <section id="publications" class="bg-neutral-800 py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
                     id="publications-terminal-window">
                     <div class="terminal-header flex items-center mb-6">
                         <div class="terminal-btn btn-red" data-tooltip="Exit Session">
@@ -2079,14 +2363,32 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                             <!-- Publication 1 -->
                             <div
-                                class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+                                class="publication-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-3">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">BioCube: Cancelable Biohash
-                                        Encoded <br>and
-                                        Infinity Cube Transformed Biometric <br>Template Generation</h3>
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">
+                                        BioCube: Cancelable Biohash Encoded <br>and Infinity Cube Transformed Biometric
+                                        <br>Template Generation
+                                    </h3>
                                     <span class="text-gray-500 font-mono text-sm">2025</span>
                                 </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4">Intelligent Computing. CompCom 2025. Lecture Notes in Networks and Systems, vol 1425. Springer, Cham</p>
+
+                                <!-- Label + Journal Info -->
+                                <span class="text-green-500 font-mono text-xs uppercase tracking-wide">Published
+                                    in</span>
+                                <p class="text-gray-400 font-mono text-sm mb-2 border-l-2 border-green-500 pl-3">
+                                    Intelligent Computing. CompCom 2025. Lecture Notes in Networks and Systems, vol
+                                    1425. Springer, Cham
+                                </p>
+
+                                <!-- Label + Summary -->
+                                <span class="text-green-500 font-mono text-xs uppercase tracking-wide">Summary</span>
+                                <blockquote
+                                    class="text-gray-300 font-mono text-sm italic mb-4 bg-neutral-800 p-3 rounded border border-green-500/50">
+                                    Introduced a novel encryption-based biometric framework to improve security and
+                                    privacy in authentication systems.
+                                </blockquote>
+
+                                <!-- Keywords -->
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Biometric
@@ -2096,40 +2398,66 @@
                                         Biometrics</span>
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Finger
-                                        Vein
-                                        Biometric</span>
+                                        Vein Biometric</span>
                                 </div>
-                                <div class="flex flex-col mt-4 space-y-2">
-                                    <div class="flex justify-between items-center  mt-4">
-                                        <span class="text-gray-400 font-mono text-sm">DOI: 10.1007/978-3-031-92608-2_4</span>
+
+                                <!-- DOI + Read Paper -->
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-gray-300 font-mono text-sm">DOI:
+                                        10.1007/978-3-031-92608-2_4</span>
+                                    <a href="https://doi.org/10.1007/978-3-031-92608-2_4" target="_blank"
+                                        class="bg-green-500 hover:bg-green-400 text-black font-mono text-sm font-bold px-3 py-1 rounded transition-colors duration-200">
+                                        > Read Paper
+                                    </a>
+                                </div>
+
+                                <!-- Citation -->
+                                <div
+                                    class="bg-neutral-900 p-3 rounded border border-green-500/20 font-mono text-xs leading-relaxed mt-3">
+                                    <span class="font-bold text-green-400">Citation:</span>
+                                    <span class="bg-green-900 text-green-300 px-1.5 py-0.5 rounded font-bold">Joshi,
+                                        R.</span>,
+                                    <span class="text-gray-400">Sharma, S., Bhilare, S., Bera, P. (2025). BioCube:
+                                        Cancelable Biohash Encoded and Infinity Cube Transformed Biometric Template
+                                        Generation. In: Arai, K. (eds) Intelligent Computing. CompCom 2025. Lecture
+                                        Notes in Networks and Systems, vol 1425. Springer, Cham.
                                         <a href="https://doi.org/10.1007/978-3-031-92608-2_4" target="_blank"
-                                            class="text-green-500 hover:text-green-400 font-mono text-sm">> Read
-                                            Paper</a>
-                                    </div>
-                                    <div
-                                        class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
-                                        <span class="font-bold text-green-400">Citation:</span>
-                                        <i><span class="font-bold text-green-500">Joshi, R.</span>, Sharma, S., Bhilare, S., Bera, P. (2025). BioCube: Cancelable Biohash Encoded and Infinity Cube Transformed Biometric Template Generation. In: Arai, K. (eds) Intelligent Computing. CompCom 2025. Lecture Notes in Networks and Systems, vol 1425. Springer, Cham. https://doi.org/10.1007/978-3-031-92608-2_4</i>
-                                    </div>
+                                            class="text-green-400 hover:underline">https://doi.org/10.1007/978-3-031-92608-2_4</a>
+                                    </span>
                                 </div>
                             </div>
+
                             <!-- Publication 2 -->
                             <div
-                                class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+                                class="publication-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-3">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">Robust Adversarial Defense:
-                                        An Analysis <br>on
-                                        Use of Auto-Inpainting</h3>
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">
+                                        Robust Adversarial Defense: An Analysis <br>on Use of Auto-Inpainting
+                                    </h3>
                                     <span class="text-gray-500 font-mono text-sm">2024</span>
                                 </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4">Journal: SN Computer Science Volume 6,
-                                    article number 17, (2025)
+
+                                <!-- Label + Journal Info -->
+                                <span class="text-green-500 font-mono text-xs uppercase tracking-wide">Published
+                                    in</span>
+                                <p class="text-gray-400 font-mono text-sm mb-2 border-l-2 border-green-500 pl-3">
+                                    SN Computer Science Volume 6, article number 17, (2025)
                                 </p>
+
+                                <!-- Label + Summary -->
+                                <span class="text-green-500 font-mono text-xs uppercase tracking-wide">Summary</span>
+                                <blockquote
+                                    class="text-gray-300 font-mono text-sm italic mb-4 bg-neutral-800 p-3 rounded border border-green-500/50">
+                                    Explored the effectiveness of auto-inpainting techniques as a defense against
+                                    adversarial attacks in computer vision systems, comparing multiple methods and
+                                    evaluating performance across diverse scenarios.
+                                </blockquote>
+
+                                <!-- Keywords -->
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
-                                        Machine
-                                        Learning</span>
+                                        Machine Learning</span>
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer
                                         Vision</span>
@@ -2139,42 +2467,62 @@
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
                                         Defense</span>
                                 </div>
-                                <div class="flex flex-col mt-4 space-y-2">
-                                    <div class="flex justify-between items-center mt-4">
-                                        <span class="text-gray-400 font-mono text-sm">DOI:
-                                            10.1007/s42979-024-03542-5</span>
-                                        <a href="https://doi.org/10.1007/s42979-024-03542-5" target="_blank"
-                                            class="text-green-500 hover:text-green-400 font-mono text-sm">> Read
-                                            Paper</a>
-                                    </div>
-                                    <div
-                                        class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
-                                        <span class="font-bold text-green-400">Citation:</span>
-                                        Author(s). "Sharma, S., <span class="font-bold text-green-500">Joshi, R.</span>,
-                                        Bhilare, S. et al. Robust Adversarial
-                                        Defense: An Analysis on Use
-                                        of Auto-Inpainting. SN COMPUT. SCI. 6, 17 (2025).
-                                        https://doi.org/10.1007/s42979-024-03542-5"
-                                    </div>
+
+                                <!-- DOI + Read Paper -->
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-gray-300 font-mono text-sm">DOI: 10.1007/s42979-024-03542-5</span>
+                                    <a href="https://doi.org/10.1007/s42979-024-03542-5" target="_blank"
+                                        class="bg-green-500 hover:bg-green-400 text-black font-mono text-sm font-bold px-3 py-1 rounded transition-colors duration-200">
+                                        > Read Paper
+                                    </a>
+                                </div>
+
+                                <!-- Citation -->
+                                <div
+                                    class="bg-neutral-900 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs leading-relaxed mt-3">
+                                    <span class="font-bold text-green-400">Citation:</span>
+                                    Sharma, S., <span
+                                        class="bg-green-900 text-green-300 px-1.5 py-0.5 rounded font-bold">Joshi,
+                                        R.</span>,
+                                    Bhilare, S. et al. Robust Adversarial Defense: An Analysis on Use of
+                                    Auto-Inpainting. SN COMPUT. SCI. 6, 17
+                                    (2025). <a href="https://doi.org/10.1007/s42979-024-03542-5" target="_blank"
+                                        class="text-green-400 hover:underline">https://doi.org/10.1007/s42979-024-03542-5</a>
                                 </div>
                             </div>
+
                             <!-- Publication 3 -->
                             <div
-                                class="publication-card bg-neutral-900 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
+                                class="publication-card bg-neutral-800 border border-green-500/20 rounded-lg p-5 hover:border-green-500/50 transition-all duration-300">
                                 <div class="flex justify-between items-start mb-3">
-                                    <h3 class="text-green-400 font-mono text-lg font-bold">Robust Adversarial Defence :
-                                        Use of
-                                        Auto-Inpainting</h3>
+                                    <h3 class="text-green-400 font-mono text-lg font-bold">
+                                        Robust Adversarial Defence: Use of Auto-Inpainting
+                                    </h3>
                                     <span class="text-gray-500 font-mono text-sm">2023</span>
                                 </div>
-                                <p class="text-gray-400 font-mono text-sm mb-4">Computer Analysis of Images and
-                                    Patterns. CAIP 2023.
-                                    Lecture Notes in Computer Science, vol 14184. Springer, Cham.</p>
+
+                                <!-- Label + Conference Info -->
+                                <span class="text-green-500 font-mono text-xs uppercase tracking-wide">Published
+                                    in</span>
+                                <p class="text-gray-400 font-mono text-sm mb-2 border-l-2 border-green-500 pl-3">
+                                    Computer Analysis of Images and Patterns. CAIP 2023. Lecture Notes in Computer
+                                    Science, vol 14184. Springer, Cham.
+                                </p>
+
+                                <!-- Label + Summary -->
+                                <span class="text-green-500 font-mono text-xs uppercase tracking-wide">Summary</span>
+                                <blockquote
+                                    class="text-gray-300 font-mono text-sm italic mb-4 bg-neutral-800 p-3 rounded border border-green-500/50">
+                                    Presented early research into applying auto-inpainting as a mitigation strategy for
+                                    adversarial attacks in
+                                    image processing tasks.
+                                </blockquote>
+
+                                <!-- Keywords -->
                                 <div class="flex flex-wrap gap-2 mb-4">
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
-                                        Machine
-                                        Learning</span>
+                                        Machine Learning</span>
                                     <span
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Computer
                                         Vision</span>
@@ -2184,27 +2532,33 @@
                                         class="px-2 py-1 bg-neutral-700 text-green-400 rounded text-xs font-mono">Adversarial
                                         Defense</span>
                                 </div>
-                                <div class="flex flex-col mt-4 space-y-2">
-                                    <div class="flex justify-between items-center mt-4">
-                                        <span class="text-gray-400 font-mono text-sm">DOI:
-                                            10.1007/978-3-031-44237-7_11</span>
-                                        <a href="https://doi.org/10.1007/978-3-031-44237-7_11" target="_blank"
-                                            class="text-green-500 hover:text-green-400 font-mono text-sm">> Read
-                                            Paper</a>
-                                    </div>
-                                    <div
-                                        class="bg-neutral-800 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs">
-                                        <span class="font-bold text-green-400">Citation:</span>
-                                        Author(s). "Sharma, S., <span class="font-bold text-green-500">Joshi, R.</span>,
-                                        Bhilare, S., Joshi, M.V. (2023). Robust
-                                        Adversarial Defence: Use
-                                        of Auto-inpainting. In: Tsapatsoulis, N., et al. Computer Analysis of Images and
-                                        Patterns. CAIP
-                                        2023. Lecture Notes in Computer Science, vol 14184. Springer, Cham.
-                                        https://doi.org/10.1007/978-3-031-44237-7_11"
-                                    </div>
+
+                                <!-- DOI + Read Paper -->
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-gray-300 font-mono text-sm">DOI:
+                                        10.1007/978-3-031-44237-7_11</span>
+                                    <a href="https://doi.org/10.1007/978-3-031-44237-7_11" target="_blank"
+                                        class="bg-green-500 hover:bg-green-400 text-black font-mono text-sm font-bold px-3 py-1 rounded transition-colors duration-200">
+                                        > Read Paper
+                                    </a>
+                                </div>
+
+                                <!-- Citation -->
+                                <div
+                                    class="bg-neutral-900 p-3 rounded border border-green-500/20 text-gray-400 font-mono text-xs leading-relaxed mt-3">
+                                    <span class="font-bold text-green-400">Citation:</span>
+                                    Sharma, S., <span
+                                        class="bg-green-900 text-green-300 px-1.5 py-0.5 rounded font-bold">Joshi,
+                                        R.</span>,
+                                    Bhilare, S., Joshi, M.V. (2023). Robust Adversarial Defence: Use of Auto-inpainting.
+                                    In: Tsapatsoulis, N., et al.
+                                    Computer Analysis of Images and Patterns. CAIP 2023. Lecture Notes in Computer
+                                    Science, vol 14184. Springer,
+                                    Cham. <a href="https://doi.org/10.1007/978-3-031-44237-7_11" target="_blank"
+                                        class="text-green-400 hover:underline">https://doi.org/10.1007/978-3-031-44237-7_11</a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -2220,9 +2574,9 @@
 </element>
 <element id="905aecfa-d814-48a5-8219-26f90e0c44bc" data-section-id="905aecfa-d814-48a5-8219-26f90e0c44bc">
     <div id="root">
-        <section id="contact" class="bg-neutral-800 py-20">
+        <section id="contact" class="bg-neutral-900 py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="terminal-window bg-neutral-900 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
+                <div class="terminal-window bg-neutral-800 rounded-lg border border-green-500/30 p-6 md:p-8 shadow-lg"
                     id="contact-terminal-window">
                     <div class="terminal-header flex items-center mb-6">
                         <div class="terminal-btn btn-red" data-tooltip="Exit Session">
@@ -2364,48 +2718,13 @@
 </element>
 <element id="01219cd0-f928-4be0-981d-069972e95a99" data-section-id="01219cd0-f928-4be0-981d-069972e95a99">
     <div id="root">
-        <footer id="footer" class="bg-neutral-900 border-t border-green-500/30">
+        <footer id="footer" class="bg-neutral-800 border-t border-green-500/30">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="terminal-prompt">
                         <span class="text-green-500 font-mono text-lg mb-4 block">$ whoami</span>
                         <p class="text-gray-400 font-mono">DevOps Engineer</p>
                         <p class="text-gray-400 font-mono">Tech Enthusiast</p>
-                    </div>
-                    <div class="terminal-nav">
-                        <span class="text-green-500 font-mono text-lg mb-4 block">$ ls navigation/</span>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="#experience"
-                                    class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
-                                    > work_experience.sh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#education"
-                                    class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
-                                    > education.sh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#projects"
-                                    class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
-                                    > projects.sh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#skills"
-                                    class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
-                                    > skills.sh
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#publications"
-                                    class="text-gray-400 hover:text-green-500 font-mono transition-colors duration-200">
-                                    > publications.sh
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="terminal-social">
                         <span class="text-green-500 font-mono text-lg mb-4 block">$ ls social/</span>
@@ -2445,6 +2764,7 @@
                 </div>
             </div>
         </footer>
+
     </div>
 </element>
 </body>
